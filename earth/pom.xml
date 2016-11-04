@@ -16,6 +16,8 @@
 		<wiremock.version>1.55</wiremock.version>
 		<sonar-ant-task.version>2.2</sonar-ant-task.version>
 		<ehcache-core.version>2.6.9</ehcache-core.version>
+		<mail.version>1.4</mail.version>
+		<freemarker.version>2.3.14</freemarker.version>
 	</properties>
 
 	<dependencies>
@@ -89,6 +91,18 @@
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-core</artifactId>
 			<version>${ehcache-core.version}</version>
+		</dependency>
+		<!-- mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${mail.version}</version>
+		</dependency>
+		<!-- freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
 		</dependency>
 	</dependencies>
 	<build>

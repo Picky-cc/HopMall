@@ -151,7 +151,8 @@ public class CashFlowAutoIssueHandlerImpl implements CashFlowAutoIssueHandler {
 	@Autowired
 	private VirtualAccountFlowService virtualAccountFlowService;
 	//NOTICE REMOVE QUALIFER
-	@Autowired
+	//@Autowired
+	@Qualifier("dataStatisticsCacheHandler")
 	BankAccountCache bankAccountCache;
 	@Autowired
 	private UpdateAssetStatusLedgerBookHandler updateAssetStatusLedgerBookHandler;
