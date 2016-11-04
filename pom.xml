@@ -354,4 +354,38 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<repositories>
+		<repository>
+			<id>maven-public</id>
+			<name>maven-public</name>
+			<url>http://202.121.179.44:8081/repository/maven-central/</url>
+			<snapshots>
+
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-public</id>
+			<name>maven-public</name>
+			<url>http://202.121.179.44:8081/repository/maven-central/</url>
+			<releases>
+
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+
+
 </project>
+
