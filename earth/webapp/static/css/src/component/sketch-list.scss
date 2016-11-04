@@ -1,0 +1,129 @@
+
+.sketch-list {
+    $item-width: 415px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 2*$item-width - 5;
+
+    @include clearfix();
+
+    .item {
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden;
+        width: 415px;
+        float: left;
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+
+        .operate {
+            position: absolute;
+            right: 12px;
+            top: 7px;
+            display: none;
+
+            .edit,
+            .delete {
+                height: 16px;
+                width: 16px;
+
+                &.disabled {
+                    opacity: 0.5!important;
+                    filter: alpha(opacity=50)!important;
+                    -webkit-filter: grayscale(1)!important;
+                }
+            }
+
+            .edit {
+                background-position: -116px -25px;
+            }
+
+            .delete {
+                background-position: -117px -4px;
+                margin-left: 5px;
+            }
+        }
+
+        .photo {
+            height: 60px;
+            width: 60px;
+            float: left;
+            margin-right: 10px;
+            border: none;
+        }
+
+        .text {
+            overflow: hidden;
+            font-size: $font-size-14;
+
+            small {
+                font-size: 78%;
+            }
+
+            .title,
+            .sub-title {
+                @include ellipsis();
+                margin: 0;
+            }
+
+            .title {
+                color: $gray-dark;
+                font-size: 18px;
+                margin: 3px 0 5px;
+            }
+
+            .sub-title {
+                color: $gray-softer;
+                padding-top: 1px;
+            }
+
+            .status {
+                font-size: $font-size-14;
+                margin-left: 10px;
+            }
+
+            .status-danger {
+                color: $brand-danger;
+            }
+
+            .status-warn {
+                color: $brand-warning;
+            }
+        }
+    }
+
+    .item.error {
+        border-color: $brand-danger; 
+
+        & + .error {
+            float: left
+        }
+    }
+
+    .item:hover {
+        background-color: #f7f7f7;
+
+        .operate {
+            display: block;
+        }
+    }
+}
+
+.sketch-list.one-line {
+    .item .text {
+        .title,
+        .sub-title {
+            @include inline-block;
+            vertical-align: middle;
+            width: auto;
+            margin: 0;
+        }
+    }
+}

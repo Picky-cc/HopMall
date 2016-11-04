@@ -1,0 +1,231 @@
+// 物业管理
+.add-property-pg {
+    .house-info-modal {
+        .house-support {
+            .item {
+                margin-right: 30px;
+            }
+
+            .item.edit a {
+                text-decoration: underline;
+                color: #43c3ff;
+            }
+        }
+    }
+}
+
+.auto-complete-list {
+    padding: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 350px;
+    z-index: 99;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+
+    p {
+        color: $gray-softer;
+        font-size: 12px;
+        margin: 0;
+        padding: 5px 15px;
+    }
+
+    .add-cur-posi {
+        color: $highlight-color;
+    }
+
+    .list {
+        color: $gray-dark;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .item {
+        padding: 5px 15px;
+
+        &:hover,
+        &.selected {
+            background-color: #e0e0e0;
+        }
+
+        .title {
+            margin-right: 10px;
+        }
+
+        .sub-title {
+            color: $gray-softer;
+            font-size: 12px;
+        }
+
+    }
+
+}
+
+// 物业推广
+.static-table-extend {
+    .th-margin {
+        margin-left: 74px;
+    }
+
+    .th-extend {
+        color: #87d3fb;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .tr-extend {
+        display: none;
+    }
+
+}
+
+.photo-covers {
+    position: relative;
+
+    img {
+        width: 130px;
+        height: 100px;
+    }
+
+    .triangle {
+        border-top: 27px solid #43c3ff;
+        border-right: 27px solid transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:after {
+            content: '封';
+            color: #fff;
+            position: absolute;
+            top: -27px;
+            font-size: 12px;
+            left: 2px;
+        }
+
+    }
+
+    .operation {
+        position: absolute;
+        bottom: 0;
+        background-color: #43c3ff;
+        width: 18px;
+        height: 18px;
+        cursor: default;
+        text-decoration: none;
+
+        &.cover-set {
+            right: 25px;
+            color: #fff;
+            line-height: 18px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        &.cover-delete {
+            right: 0;
+            content: "";
+            background-image: url($icon-img-url-default);
+            background-position: -117px -248px;
+            width: 18px;
+            height: 18px;
+        }
+
+    }
+
+}
+
+.release-history {
+    //padding-top: $block-padding-top;
+
+    .hd {
+        margin-bottom: 15px;
+        font-size: $font-size-18;
+    }
+
+    ul,
+    ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .bd {
+        .history-section {
+            border: 1px solid #d9d9d9;
+            margin-bottom: 15px;
+
+            .section-title {
+                background-color: #f5f5f5;
+                height: 42px;
+                line-height: 42px;
+                color: #999999;
+                position: relative;
+
+                .publisher {
+                    margin-left: 15px;
+                }
+
+                .cancel {
+                    position: absolute;
+                    left: 310px;
+                }
+
+                .th-extend {
+                    float: right;
+                    margin-right: 19px;
+                }
+
+            }
+
+            .section-content {
+                display: none;
+                border-top: 1px solid #d9d9d9;
+
+                ul {
+                    padding: 5px 20px;
+
+                    li {
+                        margin: 10px 0;
+
+                        .history-name {
+                            color: #999;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    
+}
+
+.exhibit-photos {
+    .file-input {
+        float: left;
+        margin-right: 15px;
+    }
+
+    .loading {
+        float: left;
+        margin: 10px 14px 0 0;
+    }
+
+    .right-extra-text {
+        display: block;
+        overflow: hidden;
+    }
+
+}
+
+.profession {
+    margin-bottom: 10px;
+}

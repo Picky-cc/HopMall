@@ -1,0 +1,314 @@
+
+// reconcile-create  待对账
+// reconcile-issuing  异常
+// reconcile-issued  成功
+// reconcile-close  失败
+
+.content-cashflow {
+    .auto-complete-list .item {
+        padding: 5px 15px;
+        display: block;
+        margin: 0;
+    }
+
+    .lookup-params {
+        overflow: initial;
+    }
+}
+
+.data-list-cashflow {
+    .match-low,
+    .reconcile-issuing {
+        color: $brand-warning;
+    }
+
+    .match-hign,
+    .reconcile-issued {
+        color: $brand-success;
+    }
+
+    .match-fail,
+    .reconcile-close {
+        color: $brand-danger;
+    }
+}
+
+.data-list-cashflow,
+.data-list-nest {
+    tbody tr.bill-card-box {
+        background-color: #fff;
+    }
+
+    .bill-item.z-active {
+        background-color: #fffcc7;
+    }
+}
+
+// bill-card
+.bill-card {
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    &.seem-card .hd {
+        color: $brand-warning;
+    }
+
+    &.match-card .hd {
+        color: $brand-success;
+    }
+
+    .hd, 
+    .ft {
+        padding-left: 10px;
+    }
+
+    .ft {
+        line-height: 40px;
+        background-color: #f5f5f5;
+        margin-top: -1px;
+        height: 42px;
+        border: 1px solid #dedede;
+
+        .money {
+            color: #ff5555;
+            margin-right: 15px;
+        }
+
+        .submit {
+            color: #fff;
+            background-color: #75b734;
+            min-width: 100px;
+            border: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .add-bill {
+            text-align: center;
+            display: inherit;
+        }
+
+
+    }
+
+    .hd {
+        margin: 15px 0 10px;
+        font-size: 14px;
+
+        .icon-help {
+            margin-top: -1px;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+
+    .bill-table {
+        width: 100%;
+        border: none;
+        border: 1px solid #dedede;
+
+        td,
+        th {
+            padding: 8px 10px;
+            min-width: 45px;
+            border: 1px solid #dedede;
+        }
+
+        thead tr {
+            background-color: #f5f5f5;
+        }
+
+        td input {
+            max-width: 105px;
+            outline: none;
+        }
+
+        .reconcile-money {
+            color: #1c1c1c;
+            font-weight: bold;
+            position: relative;
+            min-width: 120px;
+
+            .reconcile-money-input.default {
+                color: #999;
+            }
+        }
+
+        .reconcile-money .error {
+            position: absolute;
+            right: 100%;
+            width: 150px;
+            padding: 2px 5px;
+            background: #fccac1;
+            border: 1px solid #f79686;
+            color: #d34b4b;
+            font-weight: normal;
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+            }
+
+            &:before {
+                background: url($icon-img-url-default) no-repeat -25px -262px;
+                height: 15px;
+                width: 15px;
+                float: left;
+                margin-right: 4px;
+            }
+
+            &:after {
+                height: 10px;
+                width: 10px;
+                background: #fccac1;
+                border: 1px solid #f79686;
+                border-left: none;
+                border-bottom: none;
+                position: absolute;
+                right: 3px;
+                top: 50%;
+                @include transform(rotate(45deg) translateY(-50%));
+                @include transform-origin(bottom, right);
+            }
+        }
+    }
+}
+
+// sidebar-bill-select
+.sidebar-bill-select {
+    $padding: 15px;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    min-width: 300px;
+    background-color: #fff;
+    overflow-y: auto;
+    z-index: 9990;
+
+    .hd {
+        $bg: #666;
+        $height: 44px;
+
+        height: $height;
+        line-height: $height;
+        background-color: #666;
+        color: #fff;
+        padding: 0 $padding;
+        border-bottom: 1px solid darken($bg, 10%);
+        position: relative;
+        text-align: center;
+
+        .remove,
+        .back {
+            color: #fff;
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+        }
+
+        .remove {
+            right: $padding;
+        }
+
+        .back {
+            left: $padding;
+        }
+
+        .title {
+            margin: 0;
+            font-size: $font-size-16;
+        }
+    }
+
+    .bd {
+        padding: $padding;
+
+        .wrapper {
+            margin-bottom: 10px;
+            padding-bottom: 14px;
+            border-bottom: 1px dashed #ccc;
+
+            .form-control {
+                border-color: #ccc;
+                box-shadow: none;
+                padding: 4px 8px;
+                font-size: 13px;
+            }
+        }
+
+        #results {
+            margin-bottom: 15px;
+        }
+    }
+
+    .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ccc;
+            font-size: 12px;
+
+            a {
+                display: block;
+                color: #436ba7;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .mask {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px;
+        }
+    }
+}
+
+.extend-form {
+    width: 362px;
+    background: #Fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            padding-left: 8px;
+            list-style: none;
+            line-height: 25px;
+            margin: 2px 0;
+            
+            &:hover {
+                background: #f5f5f5;
+                cursor: pointer;
+            }
+        }
+
+
+
+    }
+}
+
+

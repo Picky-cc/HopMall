@@ -1,0 +1,113 @@
+/*基于bootstrap的modal插件的样式修改*/
+
+.modal-dialog .modal-header {
+  background-color: #282d33;
+  padding: 10px 15px;
+}
+.modal-dialog .modal-title {
+  font-size: 14px;
+  color: #fff;
+}
+.modal-dialog .modal-title .sub-title {
+  color: #43c3ff;
+}
+.modal-dialog .modal-content {
+  border-radius: 2px;
+}
+.modal-dialog .close {
+  font-weight: normal;
+  text-shadow: none;
+  opacity: 1;
+  color: #6D6D6D;
+  margin-top: 0;
+}
+.modal-dialog button,
+.modal-dialog input {
+  outline: none;
+}
+.modal-dialog .modal-body {
+  text-align: center;
+  line-height: 1.8;
+  min-height: 130px;
+}
+.modal-dialog .modal-body .popup-tip {
+  text-align: left;
+  border: 1px solid;
+  padding: 2px 15px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.modal-dialog .modal-body .popup-tip.error {
+  color: #e8415f;
+  border-color: #e8415f;
+}
+.modal-dialog .modal-body .popup-tip.warning {
+  color: #f8a13f;
+  border-color: #f8a13f;
+}
+.modal-dialog .modal-body .popup-tip.success {
+  color: #61c155;
+  border-color: #61c155;
+}
+.modal-dialog .modal-body > .inner {
+  margin: 50px 0;
+}
+.modal-dialog .modal-footer {
+  text-align: center;
+  padding: 10px 15px;
+}
+.modal-dialog .btn {
+  min-width: 80px;
+  // background-color: #f6f6f6;
+  // color: #fff;
+  // outline: none;
+  // border-radius: 2px;
+  // color: #666;
+}
+// .modal-dialog .btn.btn-success {
+//   background-color: #75b734;
+//   color: #fff;
+// }
+// .modal-dialog .btn.btn-primary {
+//   background-color: #436ba7;
+//   color: #fff;
+// }
+.modal-footer .btn+.btn {
+  margin-left: 10px;
+}
+.modal-dialog table {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  font-size: 12px;
+  text-align: left;
+  color: #666;
+}
+.modal-dialog table td {
+  border: 1px solid #e5e5e5;
+  padding: 5px 15px;
+  word-break: break-all;
+}
+.modal-dialog table .text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+.modal-dialog table thead,
+.modal-dialog .vertical-thead.col-1 td:nth-child(1),
+.modal-dialog .vertical-thead.col-3 td:nth-child(3) {
+  color: #999;
+}
+
+.form-modal .form-wrapper .form .imitate-datetimepicker-input .form-control {
+    width: 140px;
+}
+
+@media (min-width: 768px) {
+  .table-modal .modal-dialog,
+  .form-modal .modal-dialog {
+      width: 667px;
+  }
+  .form-modal.small-form-modal .modal-dialog {
+    width: 500px;
+  }
+}

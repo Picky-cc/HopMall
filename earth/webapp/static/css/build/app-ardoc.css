@@ -1,0 +1,532 @@
+
+/*common*/
+/* ================================================== */
+a.disabled {
+    color: #666!important;
+    text-decoration: none!important;
+    cursor: default!important;
+}
+
+.ar-icon {
+    background: transparent url(../../images/ardoc-icons.png) no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.file-btn {
+    position: relative;
+    background-color: #f4f4f4;
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+
+.file-btn input[type=file] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.form-wrap {
+    padding: 50px 75px;
+}
+
+.form-wrap a {
+    color: #436ba7;
+}
+
+.content .fixed-table-container.table-no-bordered {
+    border: none;
+}
+
+.content .fixed-table-container tbody td,
+.content .fixed-table-container thead th {
+    border-left: none;
+}
+
+.content .fixed-table-container thead th .th-inner,
+.content .fixed-table-container tbody td .th-inner {
+    line-height: 1.42857143;
+    padding-left: 20px;
+}
+
+.partition-module .block {
+    padding: 30px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    color: #666;
+    position: relative;
+    margin: 20px 0 30px;
+    line-height: 1.42857143;
+}
+
+.partition-module .block:last-child {
+    margin-bottom: 0;
+}
+
+.partition-module .block .hd {
+    color: #666;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #fff;
+    position: absolute;
+    left: 20px;
+    padding: 0 15px;
+    top: -7px;
+    margin: 0;
+}
+
+.partition-module .block .col-item {
+    margin: 15px 0;
+}
+
+.partition-module .block .col-item .col-val {
+    position: relative;
+    display: inline-block;
+}
+
+.partition-module .block .col-item .error,
+.highlight-red {
+    color: #eb0000;
+}
+
+.partition-module .block .col-item .col-val .error {
+    position: absolute;
+    line-height: normal;
+    margin-top: 3px;
+}
+
+.partition-module .block .col-item .col-val .error:before {
+    content: '';
+    background: url(../../images/ardoc-icons.png) no-repeat -130px -2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin: -1px 5px 0 0;
+}
+
+.partition-module .block .col-item .col-val .no-edit {
+    display: inline-block;
+    line-height: 1.42857143;
+}
+
+.partition-module .block .col-item .col-val .form-control,
+.partition-module .block .col-item .col-val .no-edit {
+    padding: 4px 5px;
+    font-size: 14px;
+    width: 100%;
+    /*height: 28px;*/
+    height: auto;
+    min-height: 28px;
+    border-radius: 2px;
+}
+
+.partition-module .block .col-item .col-val .imitate-datetimepicker-input {
+    width: 100%
+}
+
+.partition-module .block .col-item .col-val select.form-control {
+    height: 28px;
+}
+
+.partition-module .block .col-item .col-val textarea.form-control {
+    resize: none;
+    outline: none;
+    border: 1px solid #ddd;
+    display: block;
+    height: 70px;
+}
+
+.partition-module .block .col-item .col-val .form-control-error,
+.partition-module .block .col-item .col-val textarea.form-control-error {
+    border-color: #eb0000;
+}
+
+.partition-module .block .col-item .col-key {
+    float: left;
+    margin-top: 7px;
+    /*min-width: 110px;*/
+    text-align: right;
+    text-overflow: ellipsis;
+    width: 113px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.partition-module .block .col-item .col-val {
+    overflow: hidden;
+    display: block;
+    vertical-align: top;
+}
+
+.partition-module .operation {
+    padding-left: 145px;
+
+}
+
+.partition-module .operation .btn {
+    border-radius: 2px;
+    outline: none;
+    width: 125px;
+    height: 40px;
+    line-height: 26px;
+}
+
+.partition-module .operation .btn-default {
+    background-color: #f6f6f6;
+    color: #333;
+}
+
+.partition-module .operation .btn-primary {
+    background-color: #436ba7;
+}
+
+.partition-module .operation .btn ~ .btn{
+    margin-left: 15px;
+}
+
+.partition-module .operation .goback {
+    margin-right: 30px;
+}
+
+.partition-module .block-data .col-item .col-val {
+    padding-bottom: 33px;
+    padding-right: 30px;
+}
+
+.partition-module .block-data {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.partition-module .block-data .col-item {
+    float: left;
+    width: 50%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.partition-module .block-single-column {
+    font-size: 14px;
+}
+
+.partition-module .block-single-column .col-item {
+    float: none;
+    width: auto;
+}
+
+.partition-module .block-single-column .col-item .col-key {
+    margin-top: 4px;
+}
+
+.partition-module .block-single-column .col-item .col-val {
+    width: 280px;
+    padding-bottom: 22px;
+}
+
+.partition-module .block-single-column .col-item .col-val.col-val-textarea {
+    width: auto;
+    margin-right: 80px;
+}
+
+.partition-module .block-single-column .append-item.col-item .col-val {
+    width: auto;
+}
+
+.partition-module .block-single-column .append-item.col-item .col-val .form-control {
+    width: 280px;
+    display: inline-block;
+}
+
+.partition-module .col-item.append-item .append-on {
+    padding: 3px 5px;
+    font-size: 14px;
+    margin-left: 15px;
+    border-radius: 2px;
+}
+
+.partition-module .col-item .modified-tip {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background-position: -116px -169px;
+}
+
+
+/*融出方*/
+/* ================================================== */
+/*detail*/
+#arDetailEl .modal-dialog .modal-body { 
+    text-align: left;
+}
+
+#arDetailEl .modal-body {
+    padding: 25px;
+}
+
+#arDetailEl .modal-body .central {
+    text-align: center;
+}
+
+#arDetailEl .modal-footer {
+    border-top: none;
+    padding-bottom: 50px;
+}
+
+#arDetailEl .block.block-historycheck .col-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#arDetailEl .block.block-checkresult {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#arDetailEl .block.block-checkresult .col-item .col-key {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+}
+
+#arDetailEl .block.block-checkresult .col-item.result .form-control {
+    width: 130px;
+}
+
+#arDetailEl .block.block-checkresult .col-item.remark .form-control {
+    height: 100px;
+}
+
+/*template*/
+.content-template-edit .partition-module .block-define-template {
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.content-template-edit .define-template {
+    border-collapse: collapse;
+    border-color: #ddd;
+    border: none;
+    color: #333;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.content-template-edit .define-template thead {
+    background-color: #f2f2f2;
+    font-size: 14px;
+}
+
+.content-template-edit .define-template .form-control {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    font-size: 12px;
+    height: auto;
+}
+
+.content-template-edit .define-template input[type="checkbox"].form-control {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+.content-template-edit .define-template td,
+.content-template-edit .define-template th {
+    padding: 6px 12px;
+}
+
+.content-template-edit .add-field-num,
+.content-template-edit .add-field-btn {
+    padding: 4px 5px;
+    height: 30px;
+    vertical-align: top;
+    border-radius: 2px;
+}
+
+.content-template-edit .add-field-btn {
+    background-color: #75b734;
+    width: 90px;
+}
+
+.content-template-edit .add-field-num {
+    width: 50px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/*project*/
+.content-project-edit .partition-module .select-template .col-val {
+    width: auto;
+    margin-right: 25px;
+}
+
+.content-project-edit .partition-module .select-template .select-box {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.content-project-edit .partition-module .select-template .select-box .item {
+    border: 1px dashed #cacaca;
+    background-color: #fff;
+    padding: 10px 15px;
+    min-width: 120px;
+    background-color: #fff;
+    margin: 0 20px 20px 0;
+    float: left;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.content-project-edit .partition-module .select-template .select-box .item:hover .icon {
+    display: block;
+}
+
+.content-project-edit .partition-module .select-template .select-box .item .icon {
+    display: none;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    color: #fff;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    background-image: none;
+    line-height: 16px;
+}
+
+.content-project-edit .partition-module .select-template .select-box .item .icon.add {
+    background-color: #436ba7;
+}
+
+.content-project-edit .partition-module .select-template .select-box .item .icon.cancel {
+    background-color: #f42537
+}
+
+.content-project-edit .partition-module .select-template .select-box .optional .item {
+    color: #436ba7;
+    border-color: #436ba7;
+}
+
+.content-project-edit .partition-module .select-template .select-box .optional .item.active {
+    background-color: transparent;
+}
+
+.content-project-edit .partition-module .select-template .select-box .tip {
+    color: #eb0000;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/*融资方－新增资产*/
+/* ================================================== */
+.state-bar .list-inline {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.state-bar .line {
+    border-top: 1px solid #ddd;
+    width: 270px;
+    margin: 4px 10px;
+}
+
+.state-bar .ar-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.state-bar .ar-icon.icon-upload {
+    background-position: 0 0;
+}
+
+.state-bar .ar-icon.icon-submit {
+    background-position: -33px 0;
+}
+
+.state-bar .active .ar-icon.icon-submit {
+    background-position: -70px 0;
+}
+
+.state-bar .item.active {
+    color: #3388ee;
+}
+
+.content-asset-add .had-upload {
+    margin-top: 15px;
+}
+
+.content-asset-add .had-upload .item:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: transparent url(../../images/ardoc-icons.png) -172px -2px no-repeat;
+    vertical-align: middle;
+}
+
+.content-asset-add .had-upload .item .file-name {
+    margin-right: 15px;
+}
+
+.content-asset-submit .partition-module .block .col-item .col-val {
+    font-weight: bold;
+    padding: 4px 5px;
+}
+
+.content-asset-submit .partition-module .block .col-item .go-revise {
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.content-asset-submit .partition-module .block-data {
+    padding-left: 100px;
+    padding-right: 30px;
+}
+
+.partition-module .block-single-column .col-item .col-val.upload-file {
+    width: auto;
+}
+
+
+/*<=ie8 不支持*/
+@media (min-width: 899px){
+    #arDetailEl .modal-dialog {
+        width: 900px;
+    }
+}
+
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 730px;
+    }
+}
+
+@media (max-width: 767px){
+    #arDetailEl .block-data .col-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 550px){
+    #arDetailEl .block-data .col-item {
+        width: 100%;
+    }
+}
+
+

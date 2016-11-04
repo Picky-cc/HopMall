@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单元测试</title>
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mocha"></div>
+    <!-- 测试框架 -->
+    <!-- <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script> -->
+    <script src="/earth/static/node_modules/mocha/mocha.js"></script>
+    <!-- 断言库 -->
+    <!-- <script src="http://chaijs.com/chai.js"></script> -->
+    <script src="/earth/static/node_modules/chai/chai.js"></script>
+    <!-- javascript测试帮助工具 -->
+    <script src="http://sinonjs.org/releases/sinon-1.17.3.js"></script>
+
+    <script src="/earth/static/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="/earth/static/js/vendor/bootstrap.min.js"></script>
+    <script src="/earth/static/js/utils/underscore.js"></script>
+    <script src="/earth/static/js/utils/backbone.js"></script>
+
+    <script>
+        var assert = chai.assert;
+
+        var global_config = { 
+            webname: 'earth', 
+            root: '/earth' 
+        };
+        
+        var image_oss_host = {
+            thumbnail: 'http://zufangbao1.img-cn-shanghai.aliyuncs.com/',
+            original: 'http://zufangbao1.oss-cn-shanghai.aliyuncs.com/' 
+        };
+    </script>
+
+    <script src="/earth/static/js/mods/init.js"></script>
+
+    <script>
+        seajs.use('./loadTests');
+    </script>
+
+</body>
+</html>
