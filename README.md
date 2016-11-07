@@ -1,19 +1,15 @@
 ### springboot + maven multiple modules
 
-* clean all && install
+*  all-clean-install
 
 ```
+	${workspace_loc:/zufangbao-springboot-center}
 	clean install -Dmaven.test.skip=true
 ```
 
-* package war
+* earth-jetty-run-war
 
 ```
-	package -Dmaven.test.skip=true
-```
-
-* run jetty
-
-```
+	${workspace_loc:/earth}
 	jetty:run-exploded -Dmaven.test.skip=true
 ```

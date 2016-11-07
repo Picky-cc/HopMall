@@ -1,1 +1,0 @@
-$(document).ready(function() { $('form[data-validate="true"]').bt_validate(); });

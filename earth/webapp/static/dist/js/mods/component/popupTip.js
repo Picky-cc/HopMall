@@ -1,1 +1,0 @@
-define(function(require,exports,module){var e=require("./dialogView");module.exports=new e({cancelBtnTxt:"关闭",bodyInnerTxt:"系统繁忙请稍候重试",excludeGoahed:!0})});
