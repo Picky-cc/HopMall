@@ -1,17 +1,19 @@
 ### springboot + maven multiple modules
 
-* package
+* clean all && install
 
 ```
-	eclipse - maven install
-	or
-	cd /springboot-demo && mvn package
+	clean install -Dmaven.test.skip=true
 ```
 
-* run
+* package war
 
 ```
-	java -jar sboot.jar
-	or
-	java -jar sboot.war 
+	package -Dmaven.test.skip=true
+```
+
+* run jetty
+
+```
+	jetty:run-exploded -Dmaven.test.skip=true
 ```

@@ -42,7 +42,7 @@
 			<artifactId>wellsfargo</artifactId>
 		</dependency>
 
-		<!-- spring security dependency  -->
+		<!-- spring security dependency -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
@@ -107,9 +107,41 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<!-- copy dependencies plugin -->
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/${project.artifactId}/WEB-INF/lib</outputDirectory>
+							<excludeGroupIds>org.apache.maven</excludeGroupIds>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- maven war plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>webapp</warSourceDirectory>
+					<webappDirectory>target/${project.artifactId}</webappDirectory>
+					<packagingExcludes>WEB-INF/lib/maven-*.jar,WEB-INF/lib/jetty-*.jar,WEB-INF/lib/servlet-api-*.jar,WEB-INF/lib/*servlet-api-*.jar,WEB-INF/lib/junit-*.jar</packagingExcludes>
+				</configuration>
+			</plugin>
+			<!-- maven jetty plugin -->
+			<plugin>
+				  <groupId>org.eclipse.jetty</groupId>
+				  <artifactId>jetty-maven-plugin</artifactId>
+				  <configuration>
+				  		<war>target/${project.artifactId}-${zufangbao.version}.war</war>
+				  </configuration>
 			</plugin>
 		</plugins>
 	</build>
