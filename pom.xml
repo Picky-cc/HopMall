@@ -17,6 +17,8 @@
 		<module>../coffer</module>
 		<module>../wellsfargo</module>
 		<module>../earth</module>
+		<module>../berkshire</module>
+		<module>../PriceWaterHouse</module>
 	</modules>
 
 	<properties>
