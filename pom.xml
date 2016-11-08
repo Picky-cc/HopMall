@@ -23,6 +23,7 @@
 		<module>../wellsfargo</module>
 		<module>../earth</module>
 		<module>../berkshire</module>
+		<module>../PriceWaterHouse</module>
 	</modules>
 
 	<properties>
@@ -90,6 +91,11 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>berkshire</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+				<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>PriceWaterHouse</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
@@ -248,6 +254,12 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.json-lib</groupId>
+				<artifactId>json-lib</artifactId>
+				<version>2.4</version>
+				<classifier>jdk15</classifier>
 			</dependency>
 			<!-- dom4j -->
 			<dependency>
