@@ -54,6 +54,8 @@
 		<tomcat-jdbc.version>7.0.42</tomcat-jdbc.version>
 		<jstl.version>1.2</jstl.version>
 		<dom4j.version>1.6.1</dom4j.version>
+		<net.sf.json-lib.version>2.4</net.sf.json-lib.version>
+		<xom.version>1.1</xom.version>
 	</properties>
 
 	<dependencyManagement>
@@ -258,7 +260,7 @@
 			<dependency>
 				<groupId>net.sf.json-lib</groupId>
 				<artifactId>json-lib</artifactId>
-				<version>2.4</version>
+				<version>${net.sf.json-lib.version}</version>
 				<classifier>jdk15</classifier>
 			</dependency>
 			<!-- dom4j -->
@@ -266,6 +268,11 @@
 				<groupId>dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>xom</groupId>
+				<artifactId>xom</artifactId>
+				<version>${xom.version}</version>
 			</dependency>
 			<!-- httpcomponents -->
 			<dependency>
