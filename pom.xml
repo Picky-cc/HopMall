@@ -16,6 +16,7 @@
 	</parent>
 
 	<modules>
+		<module>../demo2do-core</module>
 		<module>../sun</module>
 		<module>../gluon</module>
 		<module>../hathaway</module>
@@ -35,6 +36,7 @@
 
 		<!-- jar version properties -->
 		<spring.version>4.2.7.RELEASE</spring.version>
+		<spring-security.version>3.2.5.RELEASE</spring-security.version>
 		<junit.version>4.12</junit.version>
 		<hibernate.version>4.3.6.Final</hibernate.version>
 		<hibernate-commons.version>4.0.5.Final</hibernate-commons.version>
@@ -60,6 +62,11 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>demo2do-core</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>sun</artifactId>
@@ -95,7 +102,7 @@
 				<artifactId>berkshire</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
-				<dependency>
+			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>PriceWaterHouse</artifactId>
 				<version>${zufangbao.version}</version>
@@ -149,6 +156,32 @@
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+		<!-- spring security dependency -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-acl</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
 			<!-- spring data access dependency -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -330,12 +363,12 @@
 				<scope>provided</scope>
 			</dependency>
 
-			<!-- zufangbao jar -->
+			<!-- zufangbao jar
 			<dependency>
 				<groupId>com.demo2do</groupId>
 				<artifactId>demo-core</artifactId>
 				<version>1.0.0</version>
-			</dependency>
+			</dependency>  -->
 			<dependency>
 				<groupId>com.gnete</groupId>
 				<artifactId>gnete-bc-139</artifactId>
