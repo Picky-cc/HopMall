@@ -1,15 +1,38 @@
+## 项目介绍
+> zufangbao-springboot-center提供所有maven模块项目的依赖统一管理
+
+## 环境准备
+以linux 64位系统为例，安装的软件都托管在内网的[Nas](http://192.168.0.184:5000/)上，账号密码wukai/123456
+1. 需要安装[git](https://git-scm.com/downloads) (1.9)
+2. 需要安装[jdk](http://192.168.0.184:5000/sharing/PGDXvIInF)(1.8)
+3. 需要安装[ant](http://192.168.0.184:5000/sharing/MYunJ7YZg)(1.9.7)
+
+## 项目起步
+#### 注册码云账号和申请加入项目
+1.  在[码云](http://git.oschina.net/)上注册账号
+
+2.  向代码管理员李博申请加入随地付项目组
+
+#### 克隆代码
+1. 在本地安装git环境
+
 ### springboot + maven multiple modules
 
-*  all-clean-install
+-   all-clean-install
 
-```
-	${workspace_loc:/zufangbao-springboot-center}
-	clean install -Dmaven.test.skip=true
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ${workspace_loc:/zufangbao-springboot-center}
+    clean install -Dmaven.test.skip=true
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* earth-jetty-run-war
+-   earth-jetty-run-war
 
-```
-	${workspace_loc:/earth}
-	jetty:run-exploded -Dmaven.test.skip=true
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ${workspace_loc:/earth}
+    jetty:run-exploded -Dmaven.test.skip=true
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
