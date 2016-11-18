@@ -19,7 +19,7 @@
 		<module>../demo2do-core</module>
 		<module>../sun</module>
 		<module>../gluon</module>
-		<module>../hathaway</module>
+		<module>../Renaissance</module>
 		<module>../coffer</module>
 		<module>../wellsfargo</module>
 		<module>../earth</module>
@@ -86,7 +86,7 @@
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>hathaway</artifactId>
+				<artifactId>Renaissance</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<dependency>
