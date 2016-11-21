@@ -25,7 +25,7 @@
 		<module>../earth</module>
 		<module>../berkshire</module>
 		<module>../PriceWaterHouse</module>
-		<module>../mq-core</module>
+		<module>../greenLight</module>
 		<module>../test-core</module>
 	</modules>
 
@@ -71,7 +71,7 @@
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>mq-core</artifactId>
+				<artifactId>greenLight</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<dependency>
