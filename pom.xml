@@ -27,7 +27,7 @@
 		<module>../PriceWaterHouse</module>
 		<module>../greenLight</module>
 		<module>../test-core</module>
-		<module>../mockBarcklay</module>
+		<module>../mockbarcklay</module>
 		<module>../mockbridgewater</module>
 	</modules>
 
