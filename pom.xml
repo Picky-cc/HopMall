@@ -391,6 +391,13 @@
 				<artifactId>gnete-security</artifactId>
 				<version>2.5</version>
 			</dependency>
+			
+			<!-- captcha jar -->
+			<dependency>
+				<groupId>com.google</groupId>
+				<artifactId>kaptcha</artifactId>
+				<version>2.3.2</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
