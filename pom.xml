@@ -27,7 +27,7 @@
 		<module>../PriceWaterHouse</module>
 		<module>../greenLight</module>
 		<module>../test-core</module>
-		<module>../bridgewater-deduct</module>
+		<!-- <module>../bridgewater-deduct</module> -->
 	</modules>
 
 	<properties>
@@ -122,11 +122,11 @@
 				<artifactId>test-core</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
-				<dependency>
+		<!-- 		<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>bridgewater-deduct</artifactId>
 				<version>${zufangbao.version}</version>
-			</dependency>
+			</dependency> -->
 			<!-- ===============springframework================= -->
 			<!-- spring core dependency -->
 			<dependency>
