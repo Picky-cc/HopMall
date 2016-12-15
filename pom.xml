@@ -56,12 +56,13 @@
 		<slf4j.version>1.7.7</slf4j.version>
 		<jackson.version>2.5.1</jackson.version>
 		<aspectjrt.version>1.8.5</aspectjrt.version>
-		<mysql-connector.version>5.1.32</mysql-connector.version>
+		<mysql-connector.version>5.1.40</mysql-connector.version>
 		<tomcat-jdbc.version>7.0.42</tomcat-jdbc.version>
 		<jstl.version>1.2</jstl.version>
 		<dom4j.version>1.6.1</dom4j.version>
 		<net.sf.json-lib.version>2.4</net.sf.json-lib.version>
 		<xom.version>1.1</xom.version>
+		<hikaricp.version>2.5.1</hikaricp.version>
 	</properties>
 
 	<dependencyManagement>
@@ -353,10 +354,16 @@
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
+			<!-- jdbc pool -->
 			<dependency>
 				<groupId>org.apache.tomcat</groupId>
 				<artifactId>tomcat-jdbc</artifactId>
 				<version>${tomcat-jdbc.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.zaxxer</groupId>
+			    <artifactId>HikariCP</artifactId>
+			    <version>${hikaricp.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>mysql</groupId>
