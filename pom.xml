@@ -26,8 +26,8 @@
 		<module>../berkshire</module>
 		<module>../PriceWaterHouse</module>
 		<module>../greenLight</module>
-		<!-- <module>../test-core</module> -->
-		<!-- <module>../bridgewater-deduct</module> -->
+		<module>../test-core</module>
+		<module>../bridgewater-deduct</module>
 	</modules>
 
 	<properties>
