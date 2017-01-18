@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:task="http://www.springframework.org/schema/task"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/task
+    http://www.springframework.org/schema/task/spring-task.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd" default-autowire="byName">
+    
+    <util:properties id="config" location="classpath:/config.properties"></util:properties>
+	<util:properties id="task" location="classpath:/task.properties"></util:properties>
+	<util:properties id="redis" location="classpath:/redis.properties"></util:properties>
+	
+    <!-- Enable annotation based container configuration  -->
+	<context:annotation-config />
+	<!-- begin task -->
+  	
+	<task:scheduled-tasks scheduler="task-scheduler">
+
+		<task:scheduled ref="assetTask" method="endYesterdayWorkAndStartTodayWork" cron="#{task['assetTask_cron']}"/>
+		<task:scheduled ref="transferApplicationTask" method="todayRecycleAssetCreateTransferApplicationAndDeduct" cron="#{task['deduct_todayRecycleAsset_cron']}"/>
+		<task:scheduled ref="transferApplicationTask" method="overDueAssetCreateTransferApplicationAndDeduct" cron="#{task['deduct_overDueAsset_cron']}"/>
+		
+		<task:scheduled ref="orderTask" method="updateFailOrderStatus" cron="#{task['orderTask_cron']}"/>
+		<task:scheduled ref="orderTask" method="createGuaranteeOrder" cron="#{task['createGuaranteeOrder_cron']}"/>
+		<task:scheduled ref="transferApplicationTask" method="singleQueryUnionpayDeductResult" fixed-rate="#{task['queryUnionPay_fixed_rate']}" initial-delay="#{task['queryUnionPay_initial_delay']}"/>
+		<task:scheduled ref="settlementOrderTask" method="createSettlementOrder" fixed-rate="#{task['createSettlementOrder_fixed_rate']}" initial-delay="#{task['createSettlementOrder_initial_delay']}"/>
+		<task:scheduled ref="smsTask" method="sendSmsQuene" fixed-rate="#{task['sendSmsQuene_fixed_rate']}" initial-delay="#{task['sendSmsQuene_initial_delay']}"/>
+		<!-- <task:scheduled ref="smsTask" method="createRemindAndOverDueSmsQuene" cron="#{task['smsTask_remind_cron']}"/> -->
+		
+		<task:scheduled ref="prepaymentTask" method="execPrepaymentApplication" cron="#{task['execPrepaymentApplication_cron']}"/>
+		<task:scheduled ref="cashFlowTask" method="exeQueryCashFlow" fixed-delay="120000" initial-delay="120000" />
+		<task:scheduled ref="remittanceCashFlowCheckTask" method="execute" fixed-delay="#{task['check_cash_flow_for_remittance_fixed_rate']}" initial-delay="#{task['check_cash_flow_for_remittance_initial_delay']}" />
+		<!-- <task:scheduled ref="dataSyncTask" method="commandDataSync" cron="#{task['dataSyncTask_cron']}"/> -->
+	</task:scheduled-tasks>
+	
+	<task:scheduler id="task-scheduler" pool-size="10" />
+	
+	<!-- end task -->
+	<!-- Enable classpath scanning to find candidate managed beans -->
+	<context:component-scan base-package="com.zufangbao,com.suidifu">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan> 
+	
+	<!-- Only needed because we install custom converters to support the examples in the org.springframewok.samples.mvc.convert package -->
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="formatters">
+	        <bean class="com.demo2do.core.web.format.PersistentAnnotationFormatterFactory" autowire="byName" />
+	    </property>
+	</bean> 
+	
+	<!-- Expression parser -->
+	<bean id="expressionParser" class="com.demo2do.core.expression.FormattingSpelExpressionParser" autowire="byName">
+		<constructor-arg index="0">
+			<bean class="org.springframework.expression.spel.SpelParserConfiguration">
+				<constructor-arg index="0" value="true"></constructor-arg>
+				<constructor-arg index="1" value="true"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+</beans>

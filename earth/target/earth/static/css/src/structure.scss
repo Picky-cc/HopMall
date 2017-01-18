@@ -1,0 +1,504 @@
+// 整体的页面结构
+// 有些东西是旧版的样式，到时得删掉，反正旧版的界面还是引用旧版的样式
+
+%overlap-aside-and-content {
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    background-color: #fff;
+}
+.web-g-bd {
+    position: relative;
+    overflow: hidden;
+}
+.web-g-main {
+    overflow: hidden;
+    background-color: #f4f4f4;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    padding-top: $height-web-header;
+    width: 100%;
+    box-sizing: border-box;
+}
+// header
+.web-g-hd {
+    @include clearfix(false);
+    @include box-shadow(0 1px 1px rgba(0, 0, 0, .3));
+    height: $height-web-header;
+    line-height: $height-web-header;
+    background-color: #282d33;
+    // overflow: hidden;
+    position: relative;
+    z-index: 9;
+    border-bottom: 1px solid #1f2328;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .logo {
+        width: $width-web-aside;
+        overflow: hidden;
+
+        @include max-screen(1035px) {
+            width: 65px;
+        }
+        .icon {
+            margin-left: 20px;
+            width: 125px;
+            height: 39px;
+            background-position: -275px -175px;
+        }
+    }
+    .menu {
+        @include clearfix(false);
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        list-style: none;
+
+        .menu-item {
+            float: left;
+            padding: 0 10px;
+            position: relative;
+            color: #999;
+            min-width: 115px;
+            text-align: center;
+
+            @include max-screen(1240px) {
+                min-width: 110px;
+                padding: 0 5px;
+                min-width: 95px;
+                font-size: 13px;
+            }
+        }
+        .menu-item.z-active {
+            background-color: #1c2025;
+            color: #fff;
+
+            &:after {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                height: 3px;
+                content: '';
+                left: 0;
+                background-color: #436ba7;
+            }
+        }
+        .menu-item {
+            &:before {
+                background: url($icon-img-url-default) no-repeat;
+                height: 18px;
+                width: 18px;
+                content: '';
+                vertical-align: middle;
+                margin: -2px 3px 0 0;
+                @include inline-block(false);
+                background-position: 1000px 1000px;
+            }
+            &.menu-finance {
+                &:before {
+                    background-position: -49px -222px;
+                }
+                &.z-active:before {
+                    background-position: -74px -222px
+                }
+            }
+            &.menu-system {
+                &:before {
+                    background-position: -48px -70px;
+                }
+                &.z-active:before {
+                    background-position: -72px -70px;
+                }
+            }
+            &.menu-data {
+                &:before {
+                    background-position: -49px -240px;
+                }
+                &.z-active:before {
+                    background-position: -74px -240px;
+                }
+            }
+            &.menu-order {
+                &:before {
+                    background-position: -48px -26px;
+                }
+                &.z-active:before {
+                    background-position: -72px -26px;
+                }
+            }
+            &.menu-contract {
+                &:before {
+                    background-position: -48px -137px;
+                }
+                &.z-active:before {
+                    background-position: -72px -137px;
+                }
+            }
+            &.menu-property {
+                &:before {
+                    background-position: -48px -115px;
+                }
+                &.z-active:before {
+                    background-position: -72px -115px;
+                }
+            }
+            &.menu-capital, &.menu-receivable {
+                &:before {
+                    background-position: -47px -45px
+                }
+                &.z-active:before {
+                    background-position: -71px -45px;
+                }
+            }
+            &.menu-financial {
+                &:before {
+                    background-position: -49px -184px;
+                    height: 20px;
+                }
+                &.z-active:before {
+                    background-position: -74px -184px;
+                }
+            }
+            &.menu-message {
+                &:before {
+                    background-position: -49px -206px
+                }
+                &.z-active:before {
+                    background-position: -74px -206px;
+                }
+            }
+            &.menu-arlend, &.menu-arloan {
+                &:before {
+                    background-position: -47px -45px
+                }
+                &.z-active:before {
+                    background-position: -71px -45px;
+                }
+            }
+            &.menu-preloan {
+                &:before {
+                    background-position: -49px -160px;
+                    height: 20px;
+                }
+                &.z-active:before {
+                    background-position: -73px -160px;
+                }
+            }
+            &.menu-channel {
+                &:before {
+                    background-position: -47px -260px;
+                    height: 20px;
+                    width: 20px;
+                }
+                &.z-active:before {
+                    background-position: -73px -260px;
+                }
+            }
+            &.menu-report {
+                &:before {
+                    background-position: -47px -279px;
+                    height: 20px;
+                    width: 20px;
+                }
+                &.z-active:before {
+                    background-position: -73px -279px;
+                }
+            }
+        }
+    }
+    .profile {
+        color: #fff;
+        font-size: 12px;
+        padding-right: 20px;
+
+        .dropdown {
+            &.open, &:hover {
+                .dropdown-toggle .glyphicon:before {
+                    content: "\e260";
+                }
+            }
+            &:hover > .dropdown-menu {
+                display: block;
+            }
+        }
+        .dropdown-toggle {
+            display: inline-block;
+
+            .glyphicon {
+                &:before {
+                    content: "\e259";
+                }
+            }
+            .company-name {
+                margin: 0 5px;
+                display: inline-block;
+                max-width: 100px;
+                line-height: 1;
+                word-break: break-all;
+                vertical-align: middle;
+            }
+        }
+        .dropdown-menu {
+            min-width: 150px;
+            right: 0;
+            left: auto;
+            margin: 0;
+
+            li {
+                a {
+                    padding-left: 15px;
+
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        background-image: url($icon-img-url-default);
+                        height: 20px;
+                        width: 20px;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        background-color: #436ba7;
+                        color: #fff;
+                    }
+                }
+            }
+            li.item-dashboard {
+                a {
+                    &:before {
+                        background-position: -245px -245px;
+                    }
+                }
+                a:hover {
+                    &:before {
+                        background-position: -226px -245px;
+                    }
+                }
+            }
+            li.item-logout {
+                a {
+                    &:before {
+                        background-position: -245px -265px;
+                    }
+                }
+                a:hover {
+                    &:before {
+                        background-position: -226px -265px;
+                    }
+                }
+            }
+        }
+    }
+    .hd-collapsed {
+        position: relative;
+        height: 60px;
+        margin: 0;
+        width: 60px;
+        border: none;
+        background-color: transparent;
+        display: none;
+
+        span {
+            font-size: 25px;
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            color: white;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .nav {
+        display: initial;
+    }
+    &.x-collapse {
+        .profile {
+            position: absolute;
+            top: 0;
+            right: 0
+        }
+        .hd-collapsed {
+            display: initial;
+        }
+        .nav {
+            color: #fff;
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 100%;
+            background: #1c2025;
+        }
+        .menu {
+            .menu-item {
+                float: none;
+                padding-left: 20px;
+                text-align: left;
+                font-size: 16px;
+
+                &.z-active {
+                    background-color: #4c4f52;
+                }
+            }
+        }
+    }
+}
+// footer
+.web-g-ft {
+    padding: 20px;
+    font-size: 12px;
+    color: #999;
+    line-height: normal;
+    border-top: 1px solid #E7E7E7;
+
+    .abouts {
+        margin-bottom: 5px;
+    }
+    .link {
+        color: #436ba7;
+    }
+    .copyright {
+        margin-bottom: 0;
+    }
+}
+// aside
+.aside-box {
+    @extend %overlap-aside-and-content;
+    width: $width-web-aside;
+    float: left;
+    color: #666;
+    border-right: 1px solid #dedede;
+    background-color: #f4f4f4;
+
+    .extend {
+        position: absolute;
+        right: 0;
+        width: 20px;
+        bottom: 0;
+        top: 0;
+
+        &:hover {
+            @include linear-gradient(90deg, rgba(255, 255, 255, 0.19), rgba(0, 0, 0, 0.04));
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            background: url($icon-img-url-default) no-repeat;
+            background-position: -243px -225px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            @include opacity(40);
+        }
+    }
+    &.closed {
+        width: 18px;
+
+        .extend {
+            .icon {
+                background-position: -225px -225px;
+            }
+        }
+        .aside-nav {
+            display: none;
+        }
+    }
+}
+.aside-nav {
+    padding: 40px 0 10px 0;
+
+    .menu, .sub-menu {
+        list-style: none;
+        position: relative;
+    }
+    .menu-item {
+        line-height: 30px;
+        margin: 5px 0;
+
+        a {
+            display: block;
+            color: inherit;
+        }
+        .menu-link {
+            padding-left: 45px;
+            position: relative;
+            text-decoration: none;
+        }
+        .sub-menu {
+            font-size: $font-size-12;
+            padding-left: 20px;
+            color: #436ba7;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: none;
+        }
+        .sub-menu-item {
+            padding-left: 55px;
+        }
+    }
+    .menu-item.z-active {
+        font-weight: bold;
+        background-color: #fff;
+        border-right: 3px solid #436ba7;
+        color: #436ba7;
+
+        .sub-menu {
+            height: auto;
+            display: block;
+        }
+        .sub-menu-item.z-active {
+            background-color: #fff;
+            border-right: 3px solid #436ba7;
+            font-weight: bold;
+        }
+    }
+    .menu-item.has-submenu {
+        .menu-link:before {
+            content: "";
+            background: url($icon-img-url-default) no-repeat;
+            background-position: -2px -157px;
+            position: absolute;
+            left: 20px;
+            top: 9px;
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+        }
+    }
+    .menu-item.has-submenu.z-active {
+        font-weight: normal;
+        background-color: transparent;
+        border-right: none;
+        color: #666;
+
+        .menu-link:before {
+            background-position: -2px -179px;
+        }
+    }
+}
+// content
+.content {
+    @extend %overlap-aside-and-content;
+
+    .scroller {
+        overflow-y: auto;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        // padding-bottom: 49px;
+
+        // overflow和padding-bottom同时设置的问题
+
+        &:after {
+            display: block;
+            height: 49px;
+            content: '';
+        }
+    }
+}

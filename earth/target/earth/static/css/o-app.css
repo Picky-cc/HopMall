@@ -1,0 +1,766 @@
+/* ================ page css ================ */
+body {
+  font-size: 14px;
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+  min-width: 1170px;
+}
+
+.container {
+  width: 1170px !important;
+}
+
+/* ================ header css ================ */
+.header {
+  border-top: 5px solid #67AD03;
+  background: #F5F5F5;
+}
+
+h1.logo { /* this represents logo */
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h1.logo>a {
+  background: url('../img/logo.png') left 50% no-repeat;
+  display: block;
+  padding-left: 130px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 19px;
+  color: #070916;
+  font-weight: bold;
+}
+
+h1.logo>a:hover {
+  text-decoration: none;
+}
+
+.header .welcome {
+  float: right;
+  margin: 40px 15px 5px 0px;
+}
+
+.header .welcome>a {
+  font-weight: bold;
+}
+
+.header-decoration {
+  border: 3px solid #67AD03;
+  margin: 0px;
+}
+
+/* ================ login page css ================ */
+#banner {
+  background: url('../img/banner.jpg') center center no-repeat;
+  background-size: auto;
+  background-color: rgb(7, 9, 22);
+}
+
+#banner .container {
+  height: 460px;
+  position: relative;
+}
+
+#login-panel {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 25px 35px 20px;
+}
+
+#login-panel h2 {
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+  font-size: 18px;
+  color: #555;
+  margin: 3px 0px 12px;
+}
+
+#login-panel .alert {
+  margin-bottom: 5px;
+}
+
+#login-panel .form-control {
+  height: 46px;
+}
+
+#login-panel .input-group-lg {
+  width: 360px;
+  margin: 5px 0px;
+}
+
+#login-panel .form-inline {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* ================ main layout css ================ */
+.main-content {
+  margin-top: 15px;
+}
+
+.earth-panel > .panel-heading, .earth-panel > .panel-footer {
+  color: #777;
+  font-weight: bold;
+  border-color: #D5D5D5;
+  background-color: #e5e5e5; /* Old browsers */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  background-image: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* Chrome 10+,Safari 5.1+ */
+  background-image: -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5', GradientType=0); /* IE6-9 */
+  background-image: linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* W3C */
+}
+
+.earth-panel-layout > .panel-body {
+  border-top: 1px solid #FFF;
+  background: #EFEFEF;
+  padding: 0px;
+  overflow: hidden;
+  min-height: 688px;
+}
+
+.earth-panel-layout > .panel-body > .earth-panel-layout-left {
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-bottom: 25px;
+  padding-right: 20px;
+  border-right: 1px solid #CCC;
+  margin-bottom: -9999px; /* This is to make the height auto aligned */
+  padding-bottom: 9999px;
+}
+
+.earth-panel-layout > .panel-body > .earth-panel-layout-right {
+  padding: 15px 20px;
+  border-left: 1px solid #FFF;
+  margin-bottom: -9999px; /* This is to make the height auto aligned */
+  padding-bottom: 9999px;
+}
+
+.earth-panel-layout > .panel-body > .no-horizontal-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 8px;
+}
+
+.earth-panel > .panel-heading > .breadcrumb {
+  border: 0px;
+  background-color: transparent;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.earth-panel > .panel-heading > .breadcrumb > li + li:before {
+  color: #777;
+  content: "- ";
+}
+
+.earth-panel > .panel-heading > .breadcrumb > li > a:hover {
+  text-decoration: none;
+}
+
+/* ================ welcome page css ================ */
+h2.welcome {
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+  font-size: 18px;
+  font-style: normal;
+  margin: 10px 0px 25px;
+}
+
+/* ================ footer page css ================ */
+.footer {
+  background: #E5E5E5;
+  border-top: 3px solid #67AD03;
+  height: 80px;
+}
+
+/* ================ breadcrumb css ================ */
+.earth-breadcrumb-wrapper {
+  position: relative;
+}
+
+.earth-breadcrumb {
+  border-bottom: 3px solid #DFDFDF; /* may change here for other color */
+  margin-bottom: 15px;
+}
+
+.earth-breadcrumb > h2 {
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+  line-height: 40px;
+  border-bottom: 3px solid #76ACD6;
+  float: left;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: -3px;
+  padding: 0px 15px;
+  color: #222; /* may change here for other color */
+}
+
+.earth-breadcrumb > h3 {
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+  line-height: 40px;
+  border-bottom: 3px solid #FF8111;
+  float: left;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: -3px;
+  padding: 0px 15px;
+  color: #222; /* may change here for other color */
+}
+
+.earth-toolbar-wrapper {
+  margin: 15px 0px;
+  width: 100%;
+}
+
+/* ================ breadcrumb nav css ================ */
+.earth-breadcrumb-nav {
+  margin-bottom: 5px;
+  border-bottom: 3px solid #dfdfdf;
+}
+
+.earth-breadcrumb-nav > li > a {
+  padding: 10px 20px;
+  margin-right: 20px;
+  margin-bottom: -3px;
+  border-bottom: 3px solid transparent;
+  border-radius: -0px;
+  color: #555;
+  font-weight: bold;
+}
+
+.earth-breadcrumb-nav > li > a:hover,
+.earth-breadcrumb-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #FF8111;
+  color: #222;
+}
+
+.earth-breadcrumb-nav > li.active > a,
+.earth-breadcrumb-nav > li.active > a:hover,
+.earth-breadcrumb-nav > li.active > a:focus {
+  background-color: transparent;
+  border-bottom-color: #FF8111;
+  color: #222;
+}
+
+.earth-breadcrumb-nav > li > a:hover > .badge,
+.earth-breadcrumb-nav > li > a:focus > .badge
+  {
+  color: #FF8111;
+  background-color: #FFF;
+}
+
+.earth-breadcrumb-nav > li.active > a >.badge,
+.earth-breadcrumb-nav > li.active > a:hover > .badge,
+.earth-breadcrumb-nav > li.active > a:focus > .badge {
+  color: #FF8111;
+  background-color: #FFF;
+}
+
+/* ================ input width css ================ */
+.earth-input-width-default {
+  width: 160px;
+}
+
+.earth-input-width-small {
+  width: 110px;
+}
+
+/* ================ iframe css ================ */
+.iframe-body {
+  background: #EFEFEF;
+}
+
+/* ================ display box css ================ */
+ul.earth-box {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+ul.earth-box > li {
+  float: left;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #87b3d4;
+  border-color: #6c91a3;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+ul.earth-box > li.partition {
+  float: left;
+  border: none;
+  box-shadow: none;
+  background-color: #EFEFEF;
+}
+
+ul.earth-box > li.green {
+  background-color: #86bd8a;
+  border-color: #74a478;
+}
+
+ul.earth-box > li:last-child {
+  margin-right: 0px;
+}
+
+ul.earth-box > li > a {
+  display: inline-block;
+  padding: 2px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+ul.earth-box> li > a + a {
+  padding-left: 0px;
+}
+
+ul.earth-box>li .box-partition {
+  border-right: 1px solid #6d96b5;
+  box-shadow: 1px 0 0 0 #99beda;
+  display: block;
+}
+
+/* ================ project panel css ================ */
+.earth-project-well {
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+.earth-project-well > .earth-project-well-block {
+  border-left: 1px dotted #b1b1b1;
+  height: 160px;
+  padding: 10px;
+  width: 90px;
+}
+
+.earth-project-well > .earth-project-well-block .earth-project-stat-box > .earth-box > li > a {
+  width: 95px;
+  padding: 5px 0px;
+}
+
+.earth-project-well .earth-project-operation {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.earth-project-well > .earth-project-well-block .label {
+  display: block;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+.earth-project-well .earth-project-title {
+  font-size: 14px;
+  font-weight: bold;
+  height: 25px;
+  line-height: 25px;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.earth-project-well .info {
+  color: #666;
+  font-weight: bold;
+  height: 20px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.earth-project-well .info.shadow {
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+.earth-project-well .inline-label {
+  display: inline-block;
+  width: 30%;
+  padding: 0.5em;
+}
+
+/* ================ work sheet table css ================ */
+.earth-table-cell-icon {
+  padding: 3px 6px;
+}
+
+.earth-table thead:first-child tr:first-child th,
+.earth-table tbody > tr > td {
+  overflow: hidden;
+}
+
+.earth-table {
+  table-layout: fixed;
+}
+
+.earth-table tbody > tr > td.text-align-left {
+  text-align: left;
+}
+
+.earth-table .table-cell-footer {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  line-height: 28px;
+}
+
+/* ================ work calendar css ================ */
+.earth-work-calendar-cell {
+  position: relative;
+  background-clip: padding-box;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.earth-work-calendar-cell.large-height {
+  height: 60px;
+}
+
+.earth-work-calendar-cell.out-of-month {
+  background-color: #efefef;
+}
+
+.earth-work-calendar-cell > .mask {
+  position: absolute;
+  background-color: #ccc;
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  display: none;
+}
+
+.earth-work-calendar-cell > .mask .glyphicon {
+  top: 8px;
+  margin-right: 8px;
+}
+
+.earth-work-calendar-cell:hover > .mask {
+  display: block;
+}
+
+/* ================ chevron css ================ */
+.earth-chevron {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #EDEDED;
+  border-radius: 4px;
+  border: 1px solid #D4D4D4;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+.earth-chevron > li {
+  position: relative;
+  float: left;
+  height: 40px;
+  padding: 0 20px 0 30px;
+  color: #999;
+  cursor: default;
+  background-color: #EDEDED;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.earth-chevron > .active {
+  color: #3A87AD;
+  background-color: #F1F6FC;
+}
+
+.earth-chevron > li > .chevron {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  display: block;
+  border: 20px solid transparent;
+  border-right: 0;
+  border-left: 14px solid #CCC;
+  z-index: 1;
+}
+
+.earth-chevron> li > .chevron:before {
+  position: absolute;
+  top: -20px;
+  right: 1px;
+  content: " ";
+  display: block;
+  border: 20px solid transparent;
+  border-right: 0;
+  border-left: 14px solid #EDEDED;
+}
+
+.earth-chevron > .active > .chevron:before {
+  border-left-color: #F1F6FC;
+}
+
+.earth-chevron > li:last-child {
+  border-right: 1px solid #CCC;
+  padding-right: 30px;
+}
+
+/* ================ pay card css ================ */
+.earth-pay-card {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  height: 64px;
+  line-height: 42px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.earth-pay-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.earth-pay-card.new {
+  border-style: dashed;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.earth-pay-card.new a {
+  color: #aaa;
+}
+
+.earth-pay-card .card-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 64px;
+  display: none;
+  word-spacing: 15px;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.earth-pay-card:hover .card-cover {
+  display: block;
+}
+
+.earth-pay-card .card-cover a {
+  font-size: 22px;
+  z-index: 5;
+  color: #efefef;
+}
+
+/* ================ featured panel css ================ */
+.feature-panel {
+  padding: 10px;
+  border-top: 2px solid #5cb85c;
+}
+
+/* ================ contract circle css ================ */
+.earth-contract-circle {
+  display: table-cell;
+  padding: 5px 10px;
+  width: 1%;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.earth-contract-circle:last-child {
+  border-right: 0;
+}
+
+.earth-contract-circle .title {
+  margin: 5px 0;
+  font-size: 14px;
+  text-shadow: 0px 1px #eee;
+}
+
+/* ================ contract create css ================ */
+
+.house-address .text-left {
+	text-align:left;
+	padding-left:0px;
+}
+
+/* ================ app css ================ */
+.app-box {
+  margin-bottom: 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  line-height: 30px;
+  padding: 8px;
+}
+
+/* ================ color tab css ================ */
+.color-tabs {
+  overflow: hidden;
+}
+
+.color-tabs > li > a {
+  min-width: 200px;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  text-align: center;
+  color: #a8a8a8;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.color-tabs > li > a:hover,
+.color-tabs > li > a:focus {
+  border-top: 1px solid #61C155;
+  border-left-color: #ddd;
+  border-right-color: #ddd;
+  background-color: #fff;
+  color: #555;
+}
+
+.color-tabs > li.active > a,
+.color-tabs > li.active > a:hover,
+.color-tabs > li.active > a:focus {
+  border-top: 1px solid #61C155;
+}
+
+.color-tabs + .tab-content {
+  margin-top: -2px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, .15);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, .15); 
+}
+
+/* ================ order css ================ */
+
+.color-tabs > li.active > .all-tab,
+.color-tabs > li.active > .all-tab:hover,
+.color-tabs > li.active > .all-tab:focus,
+.color-tabs > li > .all-tab:hover,
+.color-tabs > li > .all-tab:focus {
+  border-top-color: #3A89C9;
+}
+
+.color-tabs > li.active > .unpaid-tab,
+.color-tabs > li.active > .unpaid-tab:hover,
+.color-tabs > li.active > .unpaid-tab:focus,
+.color-tabs > li > .unpaid-tab:hover,
+.color-tabs > li > .unpaid-tab:focus {
+  border-top-color: #E84A5F;
+}
+
+.order-tab-content {
+  min-height: 550px;  
+}
+
+/* ================ finance css ================ */
+
+.color-tabs > li.active > .all-tab,
+.color-tabs > li.active > .all-tab:hover,
+.color-tabs > li.active > .all-tab:focus,
+.color-tabs > li > .all-tab:hover,
+.color-tabs > li > .all-tab:focus {
+  border-top-color: #3A89C9;
+}
+
+.color-tabs > li.active > .unsettlement-tab,
+.color-tabs > li.active > .unsettlement-tab:hover,
+.color-tabs > li.active > .unsettlement-tab:focus,
+.color-tabs > li > .unsettlement-tab:hover,
+.color-tabs > li > .unsettlement-tab:focus {
+  border-top-color: #E84A5F;
+}
+
+.finance-tab-content {
+	min-width:550px;
+}
+
+/* ================ contract detail css ================ */
+
+.current-order {
+   position:relative;
+}
+.current-order span{
+   font-size:10px;
+   position:absolute;
+   left:-15px;
+   top:8px;
+   color:#ff961e;
+   padding:2px;
+   background:#519216;
+   border:1px solid #519216;
+   border-radius:2px;
+}
+
+/* ================ distribution settlement detail css ================ */
+
+.settlement tbody > tr >td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.settlement tbody > tr > td .title {
+  position: relative;
+  color: #777;
+  padding-bottom: 10px;
+}
+
+
+
+.detail.table-warp {
+  
+  width: 100%;
+  overflow-x:scroll;
+
+}
+
+.detail.table-warp th {
+  text-align: center;
+  border: 1px solid #CCCCCC;
+  border-collapse: collapse;
+}
+
+.detail.table-warp td,
+.detail.table-warp tfoot td {
+  border: 1px solid #CCCCCC;
+  min-width: 120px;
+}
+
+.detail .settlement.print td,
+.detail .settlement.print tfoot td {
+  min-width:60px;
+}
+
+
+.settlement-history .input-daterange-title {
+  height: 30px;
+  line-height: 30px;
+}
+
+.settlement-history .input-daterange-title label {
+  margin: 0px;
+}
+
+
+.settlement-history .input-daterange {
+  max-width: 300px;
+  margin-left: 10px;
+}
+
+

@@ -1,0 +1,69 @@
+
+.step-operation {
+    .step-tip {
+        padding: 10px 0;
+        @include clearfix;
+
+        .step-tip-item {
+            float: left;
+            text-align: center;
+            padding: 0 15px;
+            position: relative;
+
+            .ordinal {
+                color: #fff;
+                height: 36px;
+                width: 36px;
+                line-height: 36px;
+                margin: auto;
+                border-radius: 50%;
+                background: #999;
+            }
+
+            .text {
+                margin-top: 6px;
+                color: #999;
+            }
+
+            &.z-active {
+                .text {
+                    color: #3388ee;
+                }
+
+                .ordinal {
+                    background: #3388ee;
+                }
+            }
+        }
+
+        .step-tip-item:not(:first-child) {
+            $dividtion-wdith: 55px;
+
+            margin-left: $dividtion-wdith;
+
+            &:before {
+                content: '';
+                height: 1;
+                height: 1px;
+                width: $dividtion-wdith;
+                display: block;
+                position: absolute;
+                right: 100%;
+                background: #ddd;
+                top: 18px;
+            }
+        }
+    }
+
+    .step-content {
+        padding: 10px 0;
+    }
+
+    .step-footer {
+        padding: 10px 0;
+
+        .btn+.btn {
+            margin-left: 10px;
+        }
+    }
+}

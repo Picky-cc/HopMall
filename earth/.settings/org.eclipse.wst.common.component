@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="earth-1.0.0-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="gluon-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gluon/gluon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hathaway-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hathaway/hathaway">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="coffer-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/coffer/coffer">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wellsfargo-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wellsfargo/wellsfargo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="earth"/>
+        <property name="java-output-path" value="/earth/target/classes"/>
+        <property name="component.exclusion.patterns" value="WEB-INF/lib/maven-*.jar,WEB-INF/lib/jetty-*.jar,WEB-INF/lib/servlet-api-*.jar,WEB-INF/lib/*servlet-api-*.jar,WEB-INF/lib/junit-*.jar"/>
+    </wb-module>
+</project-modules>

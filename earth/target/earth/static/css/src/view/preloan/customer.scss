@@ -1,0 +1,130 @@
+.tab-content-item.project {
+    .static-table.secret-treaty a {
+        color: #436ba7;
+        text-decoration: underline;
+        margin-left: 15px;
+    }
+
+}
+
+.tab-content-item.questionnaire {
+    $border: 1px solid #d9d9d9;
+
+    .questions {
+        border: $border;
+
+        .item {
+            border-top: $border;
+
+            &:first-child {
+                border-top: none;
+            }
+
+            &.expand {
+                .answer {
+                    display: block;
+                }
+
+                .arrow {
+                    .icon {
+                        background-position: -119px -227px;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .ques,
+        .answer {
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+
+        .ques {
+            color: #666;
+            background-color: #f5f5f5;
+        }
+
+        .answer {
+            border-top: $border;
+            color: #999;
+            padding-bottom: 20px;
+            display: none;
+            @include clearfix;
+        }
+
+        .arrow {
+            padding: 0 10px;
+            margin-right: -10px;
+
+            .icon {
+                height: 12px;
+                width: 12px;
+                background-position: -119px -238px;
+            }
+
+        }
+
+    }
+
+}
+
+.tab-content-item.duediligence {
+    .icon-basic {
+        background-position: -226px -3px;
+    }
+
+    .icon-finance {
+        background-position: -226px -39px;
+    }
+
+    .icon-treaty {
+        background-position: -226px -74px;
+    }
+
+}
+
+.tab-content-item.questionnaire {
+    .icon-income {
+        background-position: -225px -113px;
+    }
+
+    .icon-cost-condition {
+        background-position: -225px -152px;
+    }
+
+    .icon-outdate {
+        background-position: -225px -191px;
+    }
+
+}
+
+.edit-questionnaire {
+    .questionnaire-tittle {
+        display: inline-block;
+        position: relative;
+    }
+
+    .btn-questionnaire {
+        float: right;
+        margin: 35px 55px 0
+    }
+
+    .del-questionnaire {
+        float: right;
+        margin-right: 30px;
+    }
+
+    .field-row.filed-block {
+        margin-left: 70px;
+    }
+
+}
+
+#addQuesDialog {
+    .field-title {
+        width: 80px;
+    }
+}

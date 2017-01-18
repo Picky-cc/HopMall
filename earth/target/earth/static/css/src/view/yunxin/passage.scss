@@ -1,0 +1,248 @@
+.yunxin-modal {
+    .modal-body {
+        padding: 20px 30px;
+        font-size: 12px;
+    }
+
+    .sketch {
+        color: #999;
+        border-bottom: 1px dashed #999;
+        padding: 6px 0;
+        text-align: left;
+
+        .item {
+            margin-right: 30px;
+        }
+    }
+
+    .detail {
+        color: #666;
+
+        .block {
+            position: relative;
+            margin: 30px 0 10px;
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+
+            .hd {
+                position: absolute;
+                left: 15px;
+                top: -18px;
+                background: #fff;
+                padding: 0 15px;
+            }
+
+            .bd {
+                padding: 15px;
+
+                .col {
+                    display: table-cell;
+                    width: 1%;
+
+                    .item {
+                        text-align: left;
+
+                        .key {
+                            text-align: right;
+                            width: 130px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .block-table {
+            margin: 30px 0 10px;
+
+            .hd {
+                text-align: left;
+            }
+
+            table {
+                td {
+                    padding: 6px 10px;
+                }
+
+                th {
+                    padding: 3px 10px;
+                }
+
+                thead {
+                    background: #e6e6e6;
+                }
+            }
+        }
+    }
+}
+
+.content-passage {
+    .wrapper {
+        padding: 30px;
+    }
+
+    .sketch {
+        .hd {
+            color: #999;
+            line-height: 20px;
+            margin: 0 0 10px;
+
+            .title {
+                color: #333;
+                font-size: 18px;
+            }
+        }
+
+        .bd {
+            border: 1px solid #dfdfdf;
+            background: #f3f3f3;
+            padding: 15px;
+
+            .col {
+                display: table-cell;
+                width: 1%;
+                color: #999;
+                text-align: center;
+
+                & > * {
+                    margin: 0;
+
+                    &:first-child {
+                        color: #436ba7;
+                        font-size: 18px;
+                        margin-bottom: 2px;
+                    }
+                }
+
+                @include max-screen(1160px) {
+                    font-size: 12px;
+
+                    & > *:first-child {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .graph {
+        @include clearfix;
+        margin: 20px 0;
+
+        .row {
+            margin: 0 0 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.span2 {
+                .item {
+                    float: left;
+                    width: 49%;
+                    margin-left: 2%;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .item {
+            border: 1px solid #dfdfdf;
+            padding: 20px;
+            position: relative;
+
+            .legend {
+                color: #333;
+                font-size: 12px;
+                font-weight: bold;
+                cursor: pointer;
+                fill: #333;
+                line-height: 28px;
+                position: absolute;
+                right: 40px;
+                z-index: 2;
+
+                span {
+                    margin-left: 20px;
+
+                    &.invisible {
+                        color: #ccc;
+                        fill: #ccc;
+                        visibility: initial;
+
+                        i {
+                            background: #ccc !important;
+                        }
+                    }
+
+                    .rect {
+                        margin-right: 5px;
+                        display: inline-block;
+                        height: 12px;
+                        width: 18px;
+                        vertical-align: middle;
+                        margin-top: -1px;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .hd {
+                position: absolute;
+                z-index: 2;
+            }
+
+            .form-control {
+                width: auto;
+                min-width: 90px;
+                display: inline-block;
+                height: 28px;
+                padding: 0 5px;
+            }
+        }
+    }
+
+    .graph {
+        .channel .bd {
+            min-height: 300px;
+        }
+        .channel .draw {
+            width: 25%; 
+            height: 300px;
+            float: left;
+        }
+    }
+}
+
+#setChannelStrategy .step-content {
+    .table {
+        padding: 0 15px;
+        margin: 0;
+    }
+
+    .channel-priority {
+        .panels {
+            @include clearfix;
+
+            .panel {
+                margin: 15px;
+                min-width: 130px;
+                float: left;
+                border: 1px solid #ddd;
+                padding: 14px 14px;
+
+                &.z-active,
+                &:hover {
+                    background: #eee;
+                }
+            }
+        }
+    }
+}
+

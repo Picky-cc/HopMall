@@ -1,0 +1,321 @@
+.static-info-wrapper {
+    $border-color: #d9d9d9;
+    $boder: 1px solid #d9d9d9;
+    $cell-padding: 15px;
+    $block-padding-top: 30px;
+    padding: 50px 115px 0;
+
+    @include max-screen(1094px) {
+        & {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+    }
+
+    .not-siege {
+        overflow: hidden;
+    }
+
+    .show-gallery {
+        @include inline-block;
+    }
+
+    .skecth-header {
+        border: 1px solid #afd9ff;
+        background-color: #eaf8ff;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 10px;
+
+        .sup {
+            color: $gray-dark;
+            margin: 0;
+        }
+
+        .sub {
+            margin: 0;
+            margin-top: 10px;
+            color: $gray-softer;
+            line-height: 1;
+        }
+
+        .lt {
+            margin-right: 200px;
+        }
+
+        .rt {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            margin-top: -17px;
+        }
+
+        .btn {
+            margin-left: 10px;
+            min-width: 75px;
+            border-radius: 2px;
+
+            &.btn-primary {
+                background-color: #436ba7;
+            }
+
+            &.btn-danger {
+                background-color: #ff6666;
+            }
+
+            &.btn-success {
+                background-color: #75b734;
+            }
+
+        }
+
+    }
+
+    .select-obj {
+        margin-bottom: 10px;
+
+        .inner {
+            padding: 30px;
+            border: $boder;
+            background-color: #f5f5f5;
+
+            label {
+                color: #999;
+                font-weight: normal;
+                margin: 0;
+            }
+
+            .form-control {
+                display: inline-block;
+                margin: 0 10px 0 5px;
+                width: 300px;
+            }
+        }
+    }
+
+    .placeholder-info {
+        // margin-bottom: 15px;
+        padding-top: 30px;
+
+        .inner {
+            padding: 25px 30px;
+            border: $boder;
+            display: table;
+            width: 100%;
+        }
+
+        .cell {
+            display: table-cell;
+            vertical-align: middle;
+
+            &.cell-icon {
+                padding-right: 25px;
+                width: 35px;
+
+                .icon {
+                    width: 35px;
+                    height: 36px;
+                }
+            }
+
+            &.cell-btn {
+                .btn {
+                    float: right;
+                    width: 84px;
+                    background-color: #75b734;
+                    border-radius: 2px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    margin-left: 15px;
+
+                    .glyphicon {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .title {
+            color: #333;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .sub-title {
+            color: #999;
+            font-size: 12px;
+            margin: 10px 0 0;
+        }
+    }
+
+    
+    .section-info {
+        padding-top: $block-padding-top;
+
+        .hd {
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-weight: bold;
+
+            .supplement {
+                font-weight: normal;
+                color: #999;
+            }
+
+            .edit{
+                color:#428bca;
+                float: right;
+                margin-right: 15px;
+                font-weight: normal;
+            }
+        }
+
+        ul,ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+    .tab-table,
+    .static-table {
+        table {
+            border: $boder;
+            width: 100%;
+            margin-top: 35px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            tbody {
+                td {
+                    border: $boder;
+                    color: $gray-dark;
+                    padding: $cell-padding;
+                    line-height: 1.5;
+                    word-break: break-all;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .top-margin-10:first-child {
+                        margin-top: 0;
+                    }
+
+                    .middle {
+                        color: $gray-soft;
+                    }
+
+                    .sub,
+                    .img-num {
+                        color: $gray-softer;
+                    }
+                }
+
+            }
+
+            thead {
+                background-color: #f5f5f5;
+
+                th {
+                    color: $gray-softer;
+                    padding: ($cell-padding - 9) $cell-padding;
+                    font-weight: normal;
+                }
+
+            }
+
+            tfoot {
+                background-color: #f5f5f5;
+
+                td {
+                    padding: 8px 15px;
+                }
+
+                .operate-item {
+                    color: #666;
+                    margin-right: 20px;
+                }
+
+                .check-box {
+                    font-weight: normal;
+                }
+
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+                vertical-align: bottom;
+                margin-right: 10px;
+
+                &.loading {
+                    width: auto;
+                    height: auto;
+                }
+
+                &.icon-size {
+                    height: 24px;
+                    width: 24px;
+                    vertical-align: middle;
+                }
+
+            }
+        }
+    }
+
+    .static-text,
+    .static-table {
+        a {
+            color: $highlight-color;
+        }
+    }
+    
+    .tab-table {
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #436ba7;
+
+            &.disabled {
+                color: #999;
+            }
+
+        }
+
+        .tab-content {
+            border: 1px solid $border-color;
+            padding: 30px 10px 50px;
+            font-size: 12px;
+
+            caption {
+                text-align: left;
+                font-size: 14px;
+                padding: 0 10px 10px;
+            }
+        }
+
+    }
+
+    .static-text {
+        .inner {
+            color: $gray-softer;
+            padding: $cell-padding;
+            border: $boder;
+            background-color: #f5f5f5;
+            height: 100px;
+
+            &.bg-white {
+                background-color: #fff;
+                height: auto;
+                padding: 20px $cell-padding;
+                line-height: 1.7;
+            }
+        }
+
+    }
+
+}

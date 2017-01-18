@@ -1,0 +1,1 @@
+define(function(require,exports,module){var e=require("baseView/tableContent"),i=e,n=Backbone.View;exports.IndexPropertyView=i,exports.DetailPropertyView=n});

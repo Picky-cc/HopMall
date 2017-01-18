@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:jdbc="http://www.springframework.org/schema/jdbc"  
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+    	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<util:properties id="jdbc" location="classpath:/jdbc.properties"></util:properties>
+	
+	<!-- Definition of DataSource -->
+	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+        <property name="driverClassName" value="#{jdbc['connection.driver_class']}" />
+        <property name="url" value="#{jdbc['connection.url']}" />
+        <property name="username" value="#{jdbc['connection.username']}" />
+        <property name="password" value="#{jdbc['connection.password']}" />
+        <property name="maxActive" value="#{jdbc['pool.max_active']}" />
+        <property name="maxIdle" value="#{jdbc['pool.max_idle']}" />
+        <property name="testWhileIdle" value="#{jdbc['pool.test_while_idle']}" />
+        <property name="validationQuery" value="#{jdbc['pool.validation_query']}" />
+        <property name="defaultAutoCommit" value="false" />
+    </bean>
+	
+	<!-- 
+		Definition of sessionFactory
+		
+		- Don't need to configure any other properties here, move all the properties to [classpath:/hibernate.properties]
+		
+	 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" lazy-init="false">
+		<property name="dataSource" ref="dataSource" />
+		<property name="namingStrategy">
+			<bean class="com.demo2do.core.persistence.SmartNamingStrategy" />
+		</property>
+		<!-- <property name="packagesToScan" value="com/zufangbao/" /> -->
+		<property name="packagesToScan" value="com.zufangbao.*" />
+	</bean>
+	
+	<bean id="genericDaoSupport" class="com.demo2do.core.persistence.GenericDaoSupport" autowire="byType" />
+	
+    <!-- Definition of TransactionManager -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager" autowire="byName" />
+
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+         <property name="transactionManager" ref="transactionManager" />
+         <property name="transactionAttributes">
+              <props>
+                   <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="list*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+                   <prop key="*_NoRollback">PROPAGATION_NOT_SUPPORTED</prop>
+                   <prop key="*">PROPAGATION_REQUIRED</prop>
+              </props>
+         </property>
+    </bean>
+
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+         <property name="beanNames">
+              <list>
+                   <value>*Service</value>
+                   <value>*Handler</value>
+              </list>
+         </property>
+         <property name="interceptorNames">
+              <list>
+                   <value>transactionInterceptor</value>
+              </list>
+    	</property>
+    </bean>
+ 
+</beans>

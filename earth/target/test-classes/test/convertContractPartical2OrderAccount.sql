@@ -1,0 +1,1 @@
+delete from order_virtual_account_relation;

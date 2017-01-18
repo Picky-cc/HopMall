@@ -1,0 +1,7 @@
+[	
+	{
+		"name": "ROLE_SUPER_USER",
+		"alias": "superuser",
+		"description": "超级管理员"
+	}
+]

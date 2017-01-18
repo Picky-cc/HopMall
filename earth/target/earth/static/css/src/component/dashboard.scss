@@ -1,0 +1,173 @@
+.dashboard {
+    width: $width-dashboard;
+    background-color: #f1f2f5;
+    z-index: 2;
+    overflow: auto;
+    height: 100%;
+    @include box-shadow(-1px 0 5px rgba(0, 0, 0, 0.18));
+
+    .dropdown-menu>li>a {
+       white-space: normal; 
+    }
+
+    // float: right;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 8;
+    &:before {
+        content: '';
+        display: block;
+        height: $height-web-header;
+    }
+
+    .inner {
+        padding: 15px 20px;
+    }
+
+    .hd {
+        color: #999;
+        
+        .name {
+            color: #333;
+            margin: 15px 0 3px;
+        }
+    }
+
+    .projects {
+        margin: 15px 0;
+    }
+
+    .tab-panel {
+        color: #999;
+
+        // .tab-menu {
+        //     margin-bottom: 0;
+
+        //     .tab-menu-item {
+        //         padding: 10px;
+        //         background-color: #f6f6f6;
+        //         text-align: center;
+        //         margin-bottom: 0;
+        //         position: relative;
+        //         display: table-cell;
+        //         width: 1%;
+
+        //         a {
+        //             color: #999;
+        //             cursor: pointer;
+        //         }
+
+        //         &.z-active {
+        //             border-radius: 0;
+        //             background-color: #fff;
+        //             background: #fff;
+        //             border: none;
+        //             border-left: 1px solid #d8d8d8;
+        //             border-right: 1px solid #d8d8d8;
+
+        //             &:before {
+        //                 content: '';
+        //                 display: block;
+        //                 height: 2px;
+        //                 position: absolute;
+        //                 bottom: -1px;
+        //                 background-color: #fff;
+        //                 width: 100%;
+        //                 left: 0;
+        //             }
+
+        //             &:first-child {
+        //                 border-left: none;
+        //             }
+
+        //             &:last-child {
+        //                 border-right: none;
+        //             }
+
+        //             a {
+        //                 color: #666;
+        //             }
+        //         }
+        //     }
+        // }
+
+        .tab-content {
+            padding: 25px 20px 30px;
+            text-align: center;
+            border: 1px solid #d8d8d8;
+            border-top: none;
+            background-color: #fff;
+
+            .tab-content-item {
+                text-align: left;
+            }
+
+            .list {
+                border: 1px solid #d8d8d8;
+            }
+
+            .item {
+                position: relative;
+                border-top: 1px solid #d8d8d8;
+
+                a {
+                    cursor: pointer;
+                }
+
+                &:first-child {
+                    border-top: none;
+                }
+
+                &:hover {
+                    background-color: #f6f6f6;
+                }
+
+                .lt,
+                .rt {
+                    padding: 14px 10px;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                .rt {
+                    padding-left: 20px;
+                }
+
+                .lt {
+                    text-align: center;
+                    background-color: #f6f6f6;
+                    width: 90px;
+
+                    a {
+                        color: inherit;
+                    }
+                }
+
+                .more{
+                    width: 10px;
+                    height: 11px;
+                    background: url($icon-img-url-default) no-repeat;
+                    background-position: -132px -149px;
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    margin-top: -5.5px;
+                    display: none;
+
+                    @include scale(1.3);
+                }
+
+                p {
+                    margin-bottom: 2px;
+
+                    strong {
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+
+}

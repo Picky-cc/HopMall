@@ -1,0 +1,306 @@
+%table-style {
+    $bg-gray: #f5f5f5;
+    $br-gray: #d9d9d9;
+
+    table {
+        border: 1px solid $br-gray;
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    tbody tr:nth-child(2n+1) {
+        background-color: #fff;
+    }
+
+    thead,
+    tbody tr:nth-child(2n) {
+        background-color: $bg-gray;
+    }
+
+    th {
+        color: #999;
+        padding: 6px 15px;
+        font-weight: 400;
+    }
+
+    td {
+        border: 1px solid $br-gray;
+        color: #666;
+        padding: 15px;
+        line-height: 1.5;
+        word-break: break-all;
+    }
+
+    .ft {
+        @include clearfix;
+        background-color: $bg-gray;
+        border: 1px solid $br-gray;
+        border-top: none;
+        padding: 8px 15px;
+        font-size: 12px;
+
+        .page-control {
+            line-height: inherit;
+        }
+    }
+}
+
+.table,
+.sys-log {
+    @extend %table-style;
+}
+
+.table {
+    td {
+        padding: 10px 15px;
+    }
+
+    &.without-alternative-bg {
+        tbody tr:nth-child(2n) {
+            background-color: #fff;
+        }
+    }
+}
+
+
+.col-layout-detail {
+    $border: 1px solid #d1d1d1;
+
+    background-color: #f5f5f5;
+
+    .top,
+    .btm {
+        border-bottom: $border;
+        color: #666;
+    }
+
+    .top {
+        padding: 20px 10px;
+        width: 100%;
+        display: table;
+
+        .block {
+            &:first-child {
+                border-left: none;
+            }
+            
+            display: table-cell;
+            padding: 0 20px;
+            border-left: $border;
+            vertical-align: top;
+
+            .btn {
+                font-size: 12px;
+                line-height: 1;
+
+                &.btn-primary {
+                    background-color: #436ba7;
+                }
+            }
+
+            .hd {
+                color: #333;
+                margin-bottom: 18px;
+                font-weight: bold;
+            }
+
+            .bd {
+                color: #666;
+                display: table;
+                width: 100%;
+                word-break: break-all;
+
+                .col {
+                    display: table-cell;
+                    padding-left: 15px;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    .operate {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            @include max-screen(1280px) {
+                .bd {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .btm {
+        padding: 10px 30px;
+
+        .block {
+            &:first-child {
+                margin-left: 0;
+            }
+
+            margin-left: 5%;
+            color: #666;
+
+            span {
+                font-weight: bold;
+            }
+
+            @include max-screen(1280px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+.scroller > .table-layout-detail {
+    padding: 20px;
+}
+
+.table-layout-detail {
+    .block {
+        $height: 28px;
+
+        @extend %table-style;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+        .btn {
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 2px;
+            height: $height;
+            min-width: 60px;
+
+            &.btn-default {
+                background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.06));
+                background-image: linear-gradient(top, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.06));
+                color: #777;
+            }
+        }
+
+        .lookup-params {
+            margin: 10px 0;
+            border: 1px solid #d9d9d9;
+        }
+
+        .hd,
+        .ft {
+            @include clearfix;
+            line-height: $height;
+
+            &.btn-add{
+                background-color:#fff;
+                cursor: pointer;
+                
+                span{
+                    line-height: 1;
+                    font-size: 13px;
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    color: $brand-primary;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .more {
+            font-size: 12px;
+            margin-top: 2px
+        }
+
+        .select-block {
+            display: inline-block;
+            border-radius: 0;
+            width: 130px;
+            height: 28px;
+            padding: 0;
+            margin: 0 10px;
+        }
+    }
+
+    .nav {
+        &.nav-tabs {
+            border-bottom:2px solid #436ba7;
+            li {
+                width: 100px;
+                height: 36px;
+
+                
+                a {
+                    color: $gray-dark;
+                    line-height: 1;
+                    border-radius: 7px 7px 0 0;
+                    text-align: center;
+                    border: none;
+                    height: 100%;
+                    margin: 0;
+                    
+                    &:hover,
+                    &:active {
+                        background-color: transparent;
+                    }
+                }
+
+            }
+
+            .active {
+                a {
+                    color: #fff;
+                    background-color: #436ba7;
+
+                    &:hover {
+                        background-color: #436ba7;
+                    }
+                }
+            } 
+
+
+
+        }
+    }
+
+    .tab-content {
+        &.block {
+            margin-top: 20px;
+
+            .total-amount {
+                color: $brand-danger;
+                font-size: $font-size-16;
+                font-weight: bold;
+            }
+
+            table {
+                td{
+                    padding: 10px;
+                
+                .form-control { 
+                    height: 30px;
+                }
+
+                }
+            }
+            
+            .summary{
+                margin-right: 10px;
+            }
+
+            
+        }
+    }
+}
+
+
+.progress-status {
+    .progress {
+        margin-top: 10px;
+        height: 5px;
+
+        .progress-bar{
+            background-color: $brand-success;
+        }
+    }
+}
