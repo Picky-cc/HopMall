@@ -1,1 +1,0 @@
-update rent_order set rent_order.`collection_bill_service_notice_status` = 0,rent_order.`transfer_status` = 0 where rent_order.`bill_life_cycle` = 3;

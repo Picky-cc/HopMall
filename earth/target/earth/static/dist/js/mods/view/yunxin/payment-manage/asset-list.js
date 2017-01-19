@@ -1,1 +1,0 @@
-define(function(require,exports,module){var e=require("baseView/tableContent"),t=(require("component/popupTip"),jQuery);module.exports=e.extend({events:{"click .text-overflow":function(e){if(window.getSelection){var n=document.createRange();n.selectNode(t(e.target)[0]),window.getSelection().addRange(n),document.execCommand("Copy")}}}})});
