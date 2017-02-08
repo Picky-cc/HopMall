@@ -9,6 +9,19 @@ fi
 
 echo -e '\e[1;43m begin to package project '$1' \e[0;m'
 
-mvn clean package -pl ../$1 -am
+version="1.0.0-SNAPSHOT"
 
+if [[ -n $2 ]]; then
+	
+	version=$2"-RELEASE";
+	
+fi
+
+if [[ $1 == "all" ]] ; then
+	mvn -Dzufangbao.version=$version clean install
+else
+
+	mvn -Dzufangbao.version=$version clean package -pl ../$1 -am
+
+fi
 echo -e '\e[1;43m end to package project '$1' \e[0;m'
