@@ -475,7 +475,7 @@
 	                        <goal>testCompile</goal>
 	                    </goals>
 	                    <configuration>
-	                        <skip>true</skip>
+	                        <skip>${skipTests}</skip>
 	                    </configuration>
 	                </execution>
 	            </executions>
