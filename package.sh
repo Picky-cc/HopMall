@@ -18,7 +18,7 @@ if [[ -n $2 ]]; then
 fi
 
 if [[ $1 == "all" ]] ; then
-	mvn -Dzufangbao.version=$version clean install
+	mvn -Dzufangbao.version=$version clean package
 else
 
 	mvn -Dzufangbao.version=$version clean package -pl ../$1 -am
