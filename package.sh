@@ -18,10 +18,10 @@ if [[ -n $2 ]]; then
 fi
 
 if [[ $1 == "all" ]] ; then
-	mvn -Dzufangbao.version=$version clean install
+	mvn -Dzufangbao.version=$version -DskipCompress=false clean package
 else
 
-	mvn -Dzufangbao.version=$version clean package -pl ../$1 -am
+	mvn -Dzufangbao.version=$version -DskipCompress=false clean package -pl ../$1 -am
 
 fi
 echo -e '\e[1;43m end to package project '$1' \e[0;m'

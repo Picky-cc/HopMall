@@ -16,6 +16,8 @@
 	</parent>
 
 	<modules>
+		<module>../canal-core</module>
+		<module>../MunichRe</module>
 		<module>../demo2do-core</module>
 		<module>../sun</module>
 		<module>../gluon</module>
@@ -26,8 +28,8 @@
 		<module>../berkshire</module>
 		<module>../PriceWaterHouse</module>
 		<module>../greenLight</module>
-		<module>../bridgewater-deduct</module>
 		<!-- <module>../test-core</module> -->
+		<module>../bridgewater-deduct</module>
 	</modules>
 
 	<properties>
@@ -36,6 +38,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<java_source_version>1.8</java_source_version>
+		<java_target_version>1.8</java_target_version>
+		<file_encoding>UTF-8</file_encoding>
 		<zufangbao.version>1.0.0-SNAPSHOT</zufangbao.version>
 
 		<!-- jar version properties -->
@@ -69,6 +74,16 @@
 
 	<dependencyManagement> 
 		<dependencies>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>canal-core</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>munichre</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>demo2do-core</artifactId>
@@ -124,11 +139,11 @@
 				<artifactId>test-core</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
-		<!-- 		<dependency>
+			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>bridgewater-deduct</artifactId>
 				<version>${zufangbao.version}</version>
-			</dependency> -->
+			</dependency>
 			<!-- ===============springframework================= -->
 			<!-- spring core dependency -->
 			<dependency>
@@ -414,6 +429,22 @@
 				<artifactId>kaptcha</artifactId>
 				<version>2.3.2</version>
 			</dependency>
+			
+			<!-- jmockit -->
+			<dependency>
+				<groupId>org.jmockit</groupId>
+				<artifactId>jmockit</artifactId>
+				<version>1.30</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- cpsuite -->
+			<dependency>
+				<groupId>io.takari.junit</groupId>
+	  			<artifactId>takari-cpsuite</artifactId>
+	  			<version>1.2.7</version>
+	  			<scope>test</scope>
+			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 
