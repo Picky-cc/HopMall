@@ -405,6 +405,12 @@
 				<version>9.2.3.v20140905</version>
 				<scope>provided</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-jsp</artifactId>
+				<version>9.2.3.v20140905</version>
+				<scope>provided</scope>
+			</dependency>
 
 			<!-- zufangbao jar
 			<dependency>
