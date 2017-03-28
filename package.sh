@@ -17,10 +17,10 @@ function packageProject(){
 	fi
 
 	if [[ $? -ne 0 ]]; then
-		echo -e '[0;31m 打包项目['$projectName']失败，请找出原因重试！[0m'
+		echo -e '\033[31m打包项目['$projectName']失败，请找出原因重试！\033[0m'
 		exit
 	else
-		echo '成功打包项目['$projectName']'
+		echo -e '\033[33m成功打包项目['$projectName']\033[0m'
 	fi
 }
 
@@ -38,10 +38,8 @@ echo '请输入项目的编号数字：'
 
 read num
 
-LAST_INDEX=
-
 while [[ "$num" -lt 0 ]] || [[ "$num" -ge ${PROJECT_NUM} ]]; do
-	echo '输入项目编号有误，不存在该编号，请确认！'
+	echo -e '\033[31m输入项目编号有误，不存在该编号，请确认！\033[0m'
 	read num
 done
 

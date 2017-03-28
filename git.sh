@@ -73,7 +73,7 @@ function executeCommand(){
 	
 }
 
-project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe greenLight demo2do-core canal-core all)
+project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core all)
 
 command_list=(pull checkout push tag)
 
