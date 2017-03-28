@@ -24,22 +24,26 @@ function packageProject(){
 	fi
 }
 
-echo '目前支持打包的项目如下：'
+PROJECT_NUM=${#project[*]}
 
-for(( i=0;i<${#project[*]};i++ )); 
+echo '目前支持打包的项目个数有['$PROJECT_NUM']个，分别如下：'
+
+for(( i=0;i<${PROJECT_NUM};i++ )); 
 {
 	echo $i'.'${project[$i]}
 }
-echo 'Deloitte项目占不支持此命令，需要手动执行命令，步骤是 1.在zufangbao-springboot-center中执行`mvn clean install` 2.在Deloitte下执行命令`mvn clean install`'
+echo 'Deloitte项目暂不支持此命令，需要手动执行命令，步骤是 1.在zufangbao-springboot-center中执行`mvn clean install` 2.在Deloitte下执行命令`mvn clean install`'
 
 echo '请输入项目的编号数字：'
 
 read num
 
-if [[ $num < 0 ]] || [[ $num >7 ]]; then
+LAST_INDEX=
+
+while [[ "$num" -lt 0 ]] || [[ "$num" -ge ${PROJECT_NUM} ]]; do
 	echo '输入项目编号有误，不存在该编号，请确认！'
-	exit
-fi
+	read num
+done
 
 projectName=${project[$num]}
 
@@ -52,35 +56,24 @@ if [[ -z $version ]]; then
 	version="1.0.0-SNAPSHOT"
 fi
 
-echo '开始打包项目['$projectName']，确定请输入yes，否则no：'
+echo '开始打包项目['$projectName']:'
 
-read confirm
+if [[ $projectName == "all" ]]; then
 
-case $confirm in
-	yes )
+	for projectNameItem in ${project[*]}; do 
+
+		echo 'projectNameItem :'$projectNameItem
 		
-		if [[ $projectName == "all" ]]; then
+		if [[ $projectNameItem != "all" ]] ; then
 
-			for projectNameItem in ${project[*]}; do 
-
-				echo 'projectNameItem :'$projectNameItem
-				
-				if [[ $projectNameItem != "all" ]] ; then
-
-						packageProject $projectNameItem $version
-				fi
-			done
-		else
-			packageProject $projectName $version
+				packageProject $projectNameItem $version
 		fi
+	done
+else
+	packageProject $projectName $version
+fi
 
-		;;
-	no )
-		echo '退出打包项目['$projectName']'
-		sleep 2
-		exit
-		;;
-esac
+		
 
 
 
