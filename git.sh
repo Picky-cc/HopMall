@@ -50,7 +50,7 @@ function executeCommand(){
 			exit
 		fi
 
-		echo -e '\033[41m进入项目['$projectName']:\033[0m'
+		echo -e '\033[33m进入项目['$projectName']:\033[0m'
 
 		cd $projectName
 
@@ -70,7 +70,7 @@ function executeCommand(){
 		cd ..
 	fi
 
-	
+
 }
 
 project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core all)
@@ -83,18 +83,21 @@ command_list=(pull checkout push tag)
 # command_list_alias[merge]='合并批量项目代码'
 # command_list_alias[tag]='tag标记批量项目'
 
+echo '该脚本提供了一些常用的批量操作工具，比如：批量提交、批量更新、批量切换分支、批量打项目tag工具'
+
+echo '当前脚本路径是'$PWD
+
 echo '该脚本提供git的一些工具：'
 
-for(( index=0;index<${#command_list[*]};index++ )); do 
+for(( index=0;index<${#command_list[*]};index++ )); do
 
 	command_name=${command_list[$index]}
 
 	echo $index'.'$command_name'项目'
 done
 
-echo '请选择工具编号：'
+read -p  '请选择工具编号:' command_index
 
-read command_index
 
 readArgsFromConsole $command_index ${#command_list[*]} '请重新选择工具编号'
 
@@ -107,13 +110,18 @@ for((;i<${#project[*]};i++)); do
 	echo $i'.'${project[$i]}
 done;
 
-echo '请输入项目的编号：'
+read -p '请输入项目的编号[支持多项目，多项目数字以空格分割]:' project_indexs
 
-read project_index
+for project_index in ${project_indexs[*]}; do
+
+	 if [[ "$project_index" -lt 0 ]] || [[ "$project_index" -ge ${#project[*]} ]]; then
+	 	read  -p '您输入的数字有误，请重新输入:' project_indexs
+	 fi
+done
 
 project_len=$(expr ${#project[*]})
 
-readArgsFromConsole $project_index $project_len '请重新输入项目编号'
+# readArgsFromConsole $project_index $project_len '请重新输入项目编号'
 
 echo '请输入分支名：'
 
@@ -135,7 +143,7 @@ case $command_index in
 		message=''
 		;;
 	2|3 )
-		echo '请输入备注：'
+		echo '请输入备注:'
 
 		read message
 
@@ -147,23 +155,24 @@ case $command_index in
 		;;
 esac
 
-projectName=${project[$project_index]}
+for project_index in ${project_indexs[*]}; do
 
-command_name=${command_list[$command_index]}
+	projectName=${project[$project_index]}
 
-echo '将该命令['$command_name']作用于以下的项目['$projectName']：'
+	command_name=${command_list[$command_index]}
 
-executeCommand $command_name $projectName $branch_name $message
+	echo -e '\033[33m将该命令['$command_name']作用于以下的项目:'
 
+	if [[ $projectName == "all" ]]; then
+		for projectItem in ${project[@]:0:$((${#project[*]}-1))};do
+			echo $projectItem
+		done
+	else
+		echo $projectName
+	fi
 
+	echo -e "\033[0m"
 
+	executeCommand $command_name $projectName $branch_name $message
 
-
-
-
-
-
-
-
-
-
+done
