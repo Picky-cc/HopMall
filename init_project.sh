@@ -70,10 +70,10 @@ function cloneProject(){
 PROJECT_URL[0]="http://git.oschina.net/trustno1/greenLight"
 PROJECT_URL[1]="http://git.oschina.net/trustno1/MunichRe"
 PROJECT_URL[2]="http://git.oschina.net/trustno1/demo2do-core"
-PROJECT_URL[3]="http://git.oschina.net/trustno1/zufangbao-springboot-center" 
-PROJECT_URL[4]="http://git.oschina.net/trustno1/gluon" 
+PROJECT_URL[3]="http://git.oschina.net/trustno1/zufangbao-springboot-center"
+PROJECT_URL[4]="http://git.oschina.net/trustno1/gluon"
 PROJECT_URL[5]="http://git.oschina.net/trustno1/wellsfargo"
-PROJECT_URL[6]="http://git.oschina.net/trustno1/canal-core"  
+PROJECT_URL[6]="http://git.oschina.net/trustno1/canal-core"
 PROJECT_URL[7]="http://git.oschina.net/myounique/berkshire"
 PROJECT_URL[8]="http://git.oschina.net/myounique/coffer"
 PROJECT_URL[9]="http://git.oschina.net/myounique/bridgewater-deduct"
@@ -81,11 +81,12 @@ PROJECT_URL[10]="http://git.oschina.net//myounique/sun"
 PROJECT_URL[11]="http://git.oschina.net/myounique/earth"
 PROJECT_URL[12]="http://git.oschina.net/zufangbaowk/PriceWaterHouse"
 PROJECT_URL[13]="http://git.oschina.net/zufangbaowk/Renaissance"
-PROJECT_URL[14]="all"
+PROJECT_URL[14]="https://git.oschina.net/trustno1/SwissRe"
+PROJECT_URL[15]="all"
 
 TOOL_LIST=("git" "mvn" "java")
 
-echo '检查工具是否安装：' 
+echo '检查工具是否安装：'
 
 for tool in ${TOOL_LIST[*]}; do
 	checkToolExist $tool
@@ -103,10 +104,10 @@ for index in ${!PROJECT_URL[*]}; do
 
 	echo $index'.'${project}
 
-done 
+done
 
 echo '请选择需要克隆项目的编号'
-# 
+#
 read number
 
 while [[ "$number" -lt 0 ]] || [[ "$number" -ge ${#PROJECT_URL[*]} ]]; do
@@ -145,7 +146,7 @@ if [[ $project == "all" ]] ; then
 		cloneProject $url $branch
 	} &
 
-	done 
+	done
 
 else
 	cloneProject $url $branch
@@ -182,8 +183,3 @@ if [[ $? -ne 0 ]]; then
 else
 	echo '编译项目成功，请导入到开发工具中'
 fi
-
-
-
-
-	       
