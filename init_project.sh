@@ -159,8 +159,7 @@ printProjectStaticsInfoAndRemoveFile "克隆失败" "failProjects"
 printProjectStaticsInfoAndRemoveFile "克隆跳过" "skipProjects"
 
 echo '配置maven私库'
-rm -f ~/.m2/settings.xml
-wget -P ~/.m2/ http://zufangbao1.oss-cn-shanghai.aliyuncs.com/maven/settings.xml
+curl  http://zufangbao1.oss-cn-shanghai.aliyuncs.com/maven/settings.xml -o ~/.m2/settings.xml
 
 if [[ $? -ne 0 ]]; then
 	echo '配置maven私库失败，请查明原因重试！';
