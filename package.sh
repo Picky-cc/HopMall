@@ -53,7 +53,7 @@ fi
 
 # dist_category=''
 
-if [[ ${projectName} == "earth" ]]; then
+if [[ ${projectName} == "earth" ]] || [[ ${projectName} == "all" ]]; then
 
 	resource_category=(yunxin shrbank)
 	declare -A resource_category_alias

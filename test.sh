@@ -4,19 +4,16 @@
 
 echo '该脚本用来跑项目的Junit用例，支持的项目如下：'
 
-project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core all)
-declare -a project_test_map;
+declare -A project_test_map
 
 project_test_map["sun"]="AllTestsOfSunYunxinBranch"
 project_test_map["wellsfargo"]="AllTestsOfWellsfargoYunxinBranch"
 project_test_map["earth"]="AllTestsOfEarth"
 
-
-i=0
+project=(sun wellsfargo earth)
 
 for project_index in ${!project[@]}; do
-    echo $i'.'${project[$project_index]}
-    let i++
+    echo $project_index'.'${project[$project_index]}
 done
 
 read -p '请选择项目编号:' num
@@ -33,4 +30,6 @@ echo -e '\033[33m进入项目['$projectName']\033[0m'
 
 cd $projectName
 
-mvn clean test -DskipTests=false '"-Dtest=*'${project[$projectName]}'"' -DfailIfNoTests=false
+echo 'mvn clean test -DskipTests=false -Dtest=*'${project_test_map[$projectName]}
+
+mvn clean test -DskipTests=false "-Dtest=*"${project_test_map[$projectName]}
