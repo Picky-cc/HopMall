@@ -43,7 +43,7 @@ $.ajax({url:"http://git.oschina.net/users/search?q="+key+"&page=1&per_page=10&en
 
 			window.open(projectUrl+"team_members/new");
 
-			$.ajax({url:projectUrl+"team_members",type:"POST",data:{user_ids:user_id,utf8:"✓",project_access:projectUrlAndAccessMap[projectUrl],authenticity_token:$("input[name='authenticity_token']").val()}}).done(function(data){});
+			$.ajax({url:projectUrl+"team_members",type:"POST",data:{user_ids:user_id,utf8:"✓",project_access:projectUrlAndAccessMap[projectUrl],authenticity_token:$("input[name='authenticity_token']").val()}}).done(function(data){window.close();});
 		}
 	}
 

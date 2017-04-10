@@ -2,34 +2,69 @@
 
 ### 跑测试项目
 
+
 echo '该脚本用来跑项目的Junit用例，支持的项目如下：'
 
-declare -A project_test_map
+declare -A regex_test_map
 
-project_test_map["sun"]="AllTestsOfSunYunxinBranch"
-project_test_map["wellsfargo"]="AllTestsOfWellsfargoYunxinBranch"
-project_test_map["earth"]="AllTestsOfEarth"
+regex_test_map["sun"]="AllTestsOfSunYunxinBranch"
+regex_test_map["wellsfargo"]="AllTestsOfWellsfargoYunxinBranch"
+regex_test_map["earth"]="AllTestsOfEarth"
 
-project=(sun wellsfargo earth)
 
-for project_index in ${!project[@]}; do
-    echo $project_index'.'${project[$project_index]}
+function runTest4Project(){
+
+	local project_test_array=($1)
+
+	for projectName in ${project_test_array[*]}; do
+
+		echo -e '\033[33m进入项目['$projectName']\033[0m'
+
+		cd $projectName
+
+		_command='mvn clean test -DskipTests=false -Dtest=*'${regex_test_map[$projectName]}
+
+		echo '将执行下面的命令：'$_command
+
+		$_command
+
+	done
+}
+
+project_array=()
+
+index=0
+
+for project in ${!regex_test_map[@]}; do
+    echo $index'.'${project}
+    project_array[$index]=${project}
+    let index++
 done
+echo ${index}'.所有测试'
+
+# echo "project_array."${project_array[*]}
 
 read -p '请选择项目编号:' num
 
-if [[ "$num" -lt 0 ]] || [[ "$num" -ge ${#project[*]} ]]; then
+if [[ "$num" -lt 0 ]] || [[ "$num" -gt ${#project_array[*]} ]]; then
   read -p '输入项目编号有误，请重新输入：' num
 fi
 
-cd ../
+BASE_PATH=$(cd `dirname $0`;cd ..;pwd)
 
-projectName=${project[$num]}
+cd $BASE_PATH
 
-echo -e '\033[33m进入项目['$projectName']\033[0m'
+if [[ $num -eq ${#project_array[*]} ]]; then
 
-cd $projectName
+	index=0
 
-echo 'mvn clean test -DskipTests=false -Dtest=*'${project_test_map[$projectName]}
+	for project in ${project_array[*]}; do
+		project_test_array[$index]=${project}
+		let index++
+	done
 
-mvn clean test -DskipTests=false "-Dtest=*"${project_test_map[$projectName]}
+else
+	project_test_array[0]=${project_array[$num]}
+fi
+
+runTest4Project $project_test_array
