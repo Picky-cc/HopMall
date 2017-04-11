@@ -52,8 +52,8 @@ function printOneLineInfo(){
 PROJECT_NUM=${#project[*]}
 resource_category=(yunxin shrbank)
 declare -A resource_category_alias
-resource_category_alias[yunxin]=云信
-resource_category_alias[shrbank]=华瑞
+resource_category_alias[yunxin]=信托
+resource_category_alias[shrbank]=信贷
 
 if [[ $# -eq 0 ]]; then
 
