@@ -10,6 +10,7 @@ declare -A regex_test_map
 regex_test_map["sun"]="AllTestsOfSunYunxinBranch"
 regex_test_map["wellsfargo"]="AllTestsOfWellsfargoYunxinBranch"
 regex_test_map["earth"]="AllTestsOfEarth"
+regex_test_map["bridgewater-deduct"]="Test"
 
 
 function runTest4Project(){
