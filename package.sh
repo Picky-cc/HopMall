@@ -1,6 +1,6 @@
 #! /bin/bash
 
-project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe all)
+project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance all)
 
 function packageProject(){
 
@@ -12,7 +12,7 @@ function packageProject(){
 
 	# echo 'BASE_PATH:'$BASE_PATH
 
-	if [[ $projectName == "SwissRe" ]] || [[ $projectName == "Barclays" ]] || [[ $projectName == "MunichRe" ]]; then
+	if [[ $projectName == "SwissRe" ]] || [[ $projectName == "Barclays" ]] || [[ $projectName == "MunichRe" ]] || [[ $projectName == "bridgewater-remittance" ]]; then
 
 		mvn clean install -DskipCompress=true -Dzufangbao.version=$version
 
