@@ -132,9 +132,9 @@ if [[ -z $branch_name ]];then
 	branch_name='yunxin_internal'
 fi
 
-if [[ $PWD =~ zufangbao-springboot-center$ ]]; then
-	cd ..
-fi
+BASE_PATH=$(cd `dirname $0`;cd ..;pwd)
+
+cd ${BASE_PATH}
 
 # echo 'command_index2['$command_index']'
 
