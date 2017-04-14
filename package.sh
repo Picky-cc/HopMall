@@ -1,6 +1,6 @@
 #! /bin/bash
 
-project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe all)
+project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler all)
 
 function packageProject(){
 
@@ -12,7 +12,7 @@ function packageProject(){
 
 	# echo 'BASE_PATH:'$BASE_PATH
 
-	if [[ $projectName == "SwissRe" ]] || [[ $projectName == "Barclays" ]] || [[ $projectName == "MunichRe" ]]; then
+	if [[ $projectName == "SwissRe" ]] || [[ $projectName == "Barclays" ]] || [[ $projectName == "MunichRe" ]] || [[ $projectName == "bridgewater-remittance" ]] || [[ $projectName == "Barclays-crawler" ]]; then
 
 		mvn clean install -DskipCompress=true -Dzufangbao.version=$version
 
@@ -52,8 +52,8 @@ function printOneLineInfo(){
 PROJECT_NUM=${#project[*]}
 resource_category=(yunxin shrbank)
 declare -A resource_category_alias
-resource_category_alias[yunxin]=云信
-resource_category_alias[shrbank]=华瑞
+resource_category_alias[yunxin]="信托(类似云信)"
+resource_category_alias[shrbank]="信贷(类似华瑞)"
 
 if [[ $# -eq 0 ]]; then
 
