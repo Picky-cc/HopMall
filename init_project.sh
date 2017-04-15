@@ -70,7 +70,7 @@ function cloneProject(){
 PROJECT_URL[0]="http://git.oschina.net/trustno1/greenLight"
 PROJECT_URL[1]="http://git.oschina.net/trustno1/MunichRe"
 PROJECT_URL[2]="http://git.oschina.net/trustno1/demo2do-core"
-PROJECT_URL[3]="http://git.oschina.net/trustno1/zufangbao-springboot-center"
+PROJECT_URL[3]="https://git.oschina.net/trustno1/zufangbao-springboot-center"
 PROJECT_URL[4]="http://git.oschina.net/trustno1/gluon"
 PROJECT_URL[5]="http://git.oschina.net/trustno1/wellsfargo"
 PROJECT_URL[6]="http://git.oschina.net/trustno1/canal-core"
