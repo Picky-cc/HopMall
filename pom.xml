@@ -30,6 +30,7 @@
 		<module>../greenLight</module>
 		<!-- <module>../test-core</module> -->
 		<module>../bridgewater-deduct</module>
+		<module>../swift</module>
 	</modules>
 
 	<properties>
@@ -142,6 +143,11 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>bridgewater-deduct</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>swift</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
