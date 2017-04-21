@@ -54,7 +54,7 @@ function executeCommand(){
 
 		cd $projectName
 
-		git_repository="upstream";
+		git_repository="origin";
 
 		if [[ $command_name == "pull" ]]; then
 
@@ -62,7 +62,7 @@ function executeCommand(){
 
 		elif [[ $command_name == "push" ]]; then
 			git add . && git commit -m $message
-			git push origin $branchName:$branchName
+			git push ${git_repository} $branchName:$branchName
 
 			# git push origin :refs/tags/yunxin_internal
 
