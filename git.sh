@@ -63,6 +63,9 @@ function executeCommand(){
 		elif [[ $command_name == "push" ]]; then
 			git add . && git commit -m $message
 			git push origin $branchName:$branchName
+
+			# git push origin :refs/tags/yunxin_internal
+
 		elif [[ $command_name == "checkout" ]]; then
 			git checkout $branchName
 		else
