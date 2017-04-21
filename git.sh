@@ -54,9 +54,11 @@ function executeCommand(){
 
 		cd $projectName
 
+		git_repository="upstream";
+
 		if [[ $command_name == "pull" ]]; then
 
-			git pull origin $branchName
+			git pull ${git_repository} $branchName
 
 		elif [[ $command_name == "push" ]]; then
 			git add . && git commit -m $message
@@ -73,7 +75,7 @@ function executeCommand(){
 
 }
 
-project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core all)
+project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core Barclays Deloitte jpmorgan  swift  SwissRe bridgewater-remittance coffer all)
 
 command_list=(pull checkout push tag)
 
