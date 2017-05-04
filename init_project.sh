@@ -50,7 +50,7 @@ function cloneProject(){
 
 	while [[ $tryTimes > 0 ]] && [[ ! $sucCloneFlg ]]; do
 		#statements
-		git clone $url -b $branch
+		git clone $url".git" -b $branch
 
 		if [[ $? -eq 0 ]]; then
 			echo $projectItem >> sucProjects;
