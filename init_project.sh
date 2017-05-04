@@ -82,7 +82,8 @@ PROJECT_URL[11]="http://gitlab.5veda.net/zjgsuwk/earth"
 PROJECT_URL[12]="http://gitlab.5veda.net/zjgsuwk/PriceWaterHouse"
 PROJECT_URL[13]="http://gitlab.5veda.net/zjgsuwk/Renaissance"
 PROJECT_URL[14]="http://gitlab.5veda.net/zjgsuwk/SwissRe"
-PROJECT_URL[15]="all"
+PROJECT_URL[15]="http://gitlab.5veda.net/zjgsuwk/swift"
+PROJECT_URL[16]="all"
 
 TOOL_LIST=("git" "mvn" "java")
 
