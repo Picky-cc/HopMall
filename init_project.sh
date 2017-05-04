@@ -50,7 +50,7 @@ function cloneProject(){
 
 	while [[ $tryTimes > 0 ]] && [[ ! $sucCloneFlg ]]; do
 		#statements
-		git clone $url -b $branch
+		git clone $url".git" -b $branch
 
 		if [[ $? -eq 0 ]]; then
 			echo $projectItem >> sucProjects;
@@ -67,22 +67,23 @@ function cloneProject(){
 }
 
 
-PROJECT_URL[0]="https://git.oschina.net/trustno1/greenLight"
-PROJECT_URL[1]="https://git.oschina.net/trustno1/MunichRe"
-PROJECT_URL[2]="https://git.oschina.net/trustno1/demo2do-core"
-PROJECT_URL[3]="https://git.oschina.net/trustno1/zufangbao-springboot-center"
-PROJECT_URL[4]="https://git.oschina.net/trustno1/gluon"
-PROJECT_URL[5]="https://git.oschina.net/trustno1/wellsfargo"
-PROJECT_URL[6]="https://git.oschina.net/trustno1/canal-core"
-PROJECT_URL[7]="https://git.oschina.net/myounique/berkshire"
-PROJECT_URL[8]="https://git.oschina.net/myounique/coffer"
-PROJECT_URL[9]="https://git.oschina.net/myounique/bridgewater-deduct"
-PROJECT_URL[10]="https://git.oschina.net//myounique/sun"
-PROJECT_URL[11]="https://git.oschina.net/myounique/earth"
-PROJECT_URL[12]="https://git.oschina.net/zufangbaowk/PriceWaterHouse"
-PROJECT_URL[13]="https://git.oschina.net/zufangbaowk/Renaissance"
-PROJECT_URL[14]="https://git.oschina.net/trustno1/SwissRe"
-PROJECT_URL[15]="all"
+PROJECT_URL[0]="http://gitlab.5veda.net/zjgsuwk/greenLight"
+PROJECT_URL[1]="http://gitlab.5veda.net/zjgsuwk/MunichRe"
+PROJECT_URL[2]="http://gitlab.5veda.net/zjgsuwk/demo2do-core"
+PROJECT_URL[3]="http://gitlab.5veda.net/zjgsuwk/zufangbao-springboot-center"
+PROJECT_URL[4]="http://gitlab.5veda.net/zjgsuwk/gluon"
+PROJECT_URL[5]="http://gitlab.5veda.net/zjgsuwk/wellsfargo"
+PROJECT_URL[6]="http://gitlab.5veda.net/zjgsuwk/canal-core"
+PROJECT_URL[7]="http://gitlab.5veda.net/zjgsuwk/berkshire"
+PROJECT_URL[8]="http://gitlab.5veda.net/zjgsuwk/coffer"
+PROJECT_URL[9]="http://gitlab.5veda.net/zjgsuwk/bridgewater-deduct"
+PROJECT_URL[10]="http://gitlab.5veda.net/zjgsuwk/sun"
+PROJECT_URL[11]="http://gitlab.5veda.net/zjgsuwk/earth"
+PROJECT_URL[12]="http://gitlab.5veda.net/zjgsuwk/PriceWaterHouse"
+PROJECT_URL[13]="http://gitlab.5veda.net/zjgsuwk/Renaissance"
+PROJECT_URL[14]="http://gitlab.5veda.net/zjgsuwk/SwissRe"
+PROJECT_URL[15]="http://gitlab.5veda.net/zjgsuwk/swift"
+PROJECT_URL[16]="all"
 
 TOOL_LIST=("git" "mvn" "java")
 
