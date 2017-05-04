@@ -31,6 +31,7 @@
 		<!-- <module>../test-core</module> -->
 		<module>../bridgewater-deduct</module>
 		<module>../swift</module>
+		<module>../Xcode</module>
 	</modules>
 
 	<properties>
@@ -148,6 +149,11 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>swift</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>Xcode</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
