@@ -1,0 +1,21 @@
+20170328 23:52:15.633 [INFO:main] com.suidifu.munichre.MunichRe - Starting MunichRe on zhenghagbodeMBP with PID 7756 (/Users/zhenghangbo/workspace/MunichRe/target/classes started by zhenghangbo in /Users/zhenghangbo/workspace/zufangbao-springboot-center)
+20170328 23:52:15.634 [INFO:main] com.suidifu.munichre.MunichRe - The following profiles are active: dev
+20170328 23:52:15.685 [INFO:main] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42039326: startup date [Tue Mar 28 23:52:15 CST 2017]; root of context hierarchy
+20170328 23:52:15.804 [INFO:background-preinit] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+20170328 23:52:16.672 [INFO:main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$c7a7d6d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20170328 23:52:16.736 [INFO:main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$13c18a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20170328 23:52:17.082 [INFO:main] org.xnio - XNIO version 3.3.6.Final
+20170328 23:52:17.098 [INFO:main] org.xnio.nio - XNIO NIO Implementation Version 3.3.6.Final
+20170328 23:52:17.171 [INFO:main] io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+20170328 23:52:17.172 [INFO:main] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1490 ms
+20170328 23:52:17.364 [INFO:main] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+20170328 23:52:17.366 [INFO:main] org.springframework.boot.context.embedded.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+20170328 23:52:17.367 [INFO:main] org.springframework.boot.context.embedded.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+20170328 23:52:17.775 [INFO:main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Started.
+20170328 23:52:18.271 [INFO:main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20170328 23:52:18.273 [INFO:main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20170328 23:52:18.353 [INFO:main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42039326: startup date [Tue Mar 28 23:52:15 CST 2017]; root of context hierarchy
+20170328 23:52:19.083 [INFO:main] org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration - 
+
+Using default security password: a8555d70-1077-4686-b917-a60599fdafc9
+

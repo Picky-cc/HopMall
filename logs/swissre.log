@@ -1,0 +1,13 @@
+20170413 03:00:40.265 [WARN:HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h31s260ms).
+20170413 11:19:30.238 [WARN:HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h18m48s969ms).
+20170413 11:20:10.146 [INFO:task-scheduler-2] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge start
+20170413 11:20:10.559 [INFO:task-scheduler-2] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge end
+20170413 11:59:59.930 [INFO:task-scheduler-4] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge start
+20170413 12:00:00.150 [INFO:task-scheduler-4] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge end
+20170413 13:00:13.291 [INFO:task-scheduler-1] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge start
+20170413 13:00:13.364 [INFO:task-scheduler-1] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge end
+20170413 13:59:59.896 [INFO:task-scheduler-5] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge start
+20170413 13:59:59.950 [INFO:task-scheduler-5] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge end
+20170413 14:59:59.900 [INFO:task-scheduler-3] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge start
+20170413 14:59:59.970 [INFO:task-scheduler-3] com.suidifu.swissre.task.CashflowChargeV2_0 - scan_cashflow_charge end
+20170413 15:24:58.562 [INFO:Thread-1] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2e1ef60: startup date [Wed Apr 12 18:57:36 CST 2017]; root of context hierarchy
