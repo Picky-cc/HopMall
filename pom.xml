@@ -30,6 +30,7 @@
 		<module>../greenLight</module>
 		<!-- <module>../test-core</module> -->
 		<module>../bridgewater-deduct</module>
+		<module>../bridgewater-remittance</module>
 		<module>../swift</module>
 		<module>../Xcode</module>
 		<module>../matryoshka</module>
@@ -161,6 +162,12 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>matryoshka</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>bridgewater-remittance</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
