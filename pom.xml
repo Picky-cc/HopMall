@@ -33,6 +33,7 @@
 		<module>../swift</module>
 		<module>../Xcode</module>
 		<module>../xxxx</module>
+		<module>../matryoshka</module>
 	</modules>
 
 	<properties>
@@ -160,6 +161,11 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>xxxx</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>matryoshka</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
