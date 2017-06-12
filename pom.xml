@@ -33,6 +33,7 @@
 		<module>../swift</module>
 		<module>../Xcode</module>
 		<module>../giotto</module>
+		<module>../contra</module>
 	</modules>
 
 	<properties>
@@ -160,6 +161,11 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>giotto</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>contra</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
