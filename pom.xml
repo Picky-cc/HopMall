@@ -33,7 +33,7 @@
 		<module>../swift</module>
 		<module>../Xcode</module>
 		<module>../giotto</module>
-		<module>../contra</module>
+		<module>../Contra</module>
 	</modules>
 
 	<properties>
