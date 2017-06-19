@@ -34,6 +34,8 @@
 		<module>../Xcode</module>
 		<module>../xxxx</module>
 		<module>../matryoshka</module>
+		<module>../giotto</module>
+		<module>../Contra</module>
 	</modules>
 
 	<properties>
@@ -166,6 +168,16 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>matryoshka</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>giotto</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>contra</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
