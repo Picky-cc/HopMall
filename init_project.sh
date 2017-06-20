@@ -83,7 +83,11 @@ PROJECT_URL[12]="http://gitlab.5veda.net/zjgsuwk/PriceWaterHouse"
 PROJECT_URL[13]="http://gitlab.5veda.net/zjgsuwk/Renaissance"
 PROJECT_URL[14]="http://gitlab.5veda.net/zjgsuwk/SwissRe"
 PROJECT_URL[15]="http://gitlab.5veda.net/zjgsuwk/swift"
-PROJECT_URL[16]="all"
+PROJECT_URL[16]="http://gitlab.5veda.net/lou/xxxx.git"
+PROJECT_URL[17]="http://gitlab.5veda.net/hangbo/matryoshka.git"
+PROJECT_URL[18]="http://gitlab.5veda.net/sanzang/giotto.git"
+PROJECT_URL[19]="http://gitlab.5veda.net/zjgsuwk/Contra.git"
+PROJECT_URL[20]="all"
 
 TOOL_LIST=("git" "mvn" "java")
 
@@ -92,6 +96,9 @@ echo '检查工具是否安装：'
 for tool in ${TOOL_LIST[*]}; do
 	checkToolExist $tool
 done
+
+## remember password & username
+git config --global credential.helper store
 
 echo '将克隆以下项目：'
 
