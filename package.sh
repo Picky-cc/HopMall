@@ -119,7 +119,7 @@ else
 
 		projectName=$1
 		version=$2
-		dist_category=$3
+		dist_category='dist_'$3
 	fi
 fi
 
