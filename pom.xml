@@ -32,7 +32,7 @@
 		<module>../bridgewater-deduct</module>
 		<module>../swift</module>
 		<module>../Xcode</module>
-		<module>../xxxx</module>
+		<module>../batchInterface</module>
 		<module>../matryoshka</module>
 		<module>../giotto</module>
 		<module>../Contra</module>
@@ -162,7 +162,7 @@
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>xxxx</artifactId>
+				<artifactId>batchInterface</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<dependency>
