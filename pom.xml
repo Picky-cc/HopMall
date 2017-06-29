@@ -33,7 +33,7 @@
 		<module>../bridgewater-remittance</module>
 		<module>../swift</module>
 		<module>../Xcode</module>
-		<module>../batchInterface</module>
+		<module>../morganStanley</module>
 		<module>../matryoshka</module>
 		<module>../giotto</module>
 		<module>../Contra</module>
@@ -168,7 +168,7 @@
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>batchInterface</artifactId>
+				<artifactId>morganStanley</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 
