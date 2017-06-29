@@ -33,8 +33,10 @@
 		<module>../bridgewater-remittance</module>
 		<module>../swift</module>
 		<module>../Xcode</module>
-		<module>../xxxx</module>
+		<module>../batchInterface</module>
 		<module>../matryoshka</module>
+		<module>../giotto</module>
+		<module>../Contra</module>
 	</modules>
 
 	<properties>
@@ -164,6 +166,11 @@
 				<artifactId>matryoshka</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>batchInterface</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>${project.groupId}</groupId>
@@ -173,6 +180,16 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>xxxx</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>giotto</artifactId>
+				<version>${zufangbao.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>contra</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
