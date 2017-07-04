@@ -36,6 +36,7 @@
 		<module>../matryoshka</module>
 		<module>../giotto</module>
 		<module>../Contra</module>
+		<module>../Barclays</module>
 	</modules>
 
 	<properties>
