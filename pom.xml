@@ -37,6 +37,7 @@
 		<module>../matryoshka</module>
 		<module>../giotto</module>
 		<module>../Contra</module>
+		<module>../Barclays</module>
 	</modules>
 
 	<properties>
@@ -166,6 +167,7 @@
 				<artifactId>matryoshka</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>morganStanley</artifactId>
