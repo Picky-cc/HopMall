@@ -88,7 +88,8 @@ PROJECT_URL[17]="http://gitlab.5veda.net/hangbo/matryoshka"
 PROJECT_URL[18]="http://gitlab.5veda.net/sanzang/giotto"
 PROJECT_URL[19]="http://gitlab.5veda.net/zjgsuwk/Contra"
 PROJECT_URL[20]="http://gitlab.5veda.net/zjgsuwk/Xcode"
-PROJECT_URL[21]="all"
+PROJECT_URL[21]="http://gitlab.5veda.net/zjgsuwk/Barclays"
+PROJECT_URL[22]="all"
 
 TOOL_LIST=("git" "mvn" "java")
 
