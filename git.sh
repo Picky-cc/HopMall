@@ -68,6 +68,8 @@ function executeCommand(){
 
 		elif [[ $command_name == "checkout" ]]; then
 			git checkout $branchName
+		elif [[ $command_name == "checkout_new" ]]; then
+			git checkout -b $branchName;
 		else
 			git tag -a 'v_'$branchName -m $message
 		fi
@@ -78,9 +80,9 @@ function executeCommand(){
 
 }
 
-project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core Barclays Deloitte jpmorgan  swift  SwissRe bridgewater-remittance coffer all)
+project=(gluon sun wellsfargo earth  Renaissance berkshire PriceWaterHouse bridgewater-deduct  zufangbao-springboot-center MunichRe greenLight demo2do-core canal-core Barclays Deloitte jpmorgan  swift  SwissRe bridgewater-remittance coffer matryoshka Xcode giotto Contra morganStanley all)
 
-command_list=(pull checkout push tag)
+command_list=(pull checkout push tag checkout_new)
 
 # command_list_alias[pull]='批量项目'
 # command_list_alias[push]='提交批量项目代码'
