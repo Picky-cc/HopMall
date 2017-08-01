@@ -35,7 +35,6 @@
 		<module>../morganStanley</module>
 		<module>../matryoshka</module>
 		<module>../giotto</module>
-		<module>../Contra</module>
 		<module>../Barclays</module>
 	</modules>
 
@@ -174,11 +173,6 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>giotto</artifactId>
-				<version>${zufangbao.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>${project.groupId}</groupId>
-				<artifactId>contra</artifactId>
 				<version>${zufangbao.version}</version>
 			</dependency>
 			<!-- ===============springframework================= -->
