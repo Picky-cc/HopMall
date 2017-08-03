@@ -124,12 +124,12 @@ while [[ "$number" -lt 0 ]] || [[ "$number" -ge ${#PROJECT_URL[*]} ]]; do
 	read number
 done
 
-echo '请输入需要克隆项目的分支名［如果不填，默认为yunxin_internal］'
+echo '请输入需要克隆项目的分支名［如果不填，默认为demasiah］'
 
 read branch
 
 if [[ -z $branch ]]; then
-	branch="yunxin_internal"
+	branch="demasiah"
 fi
 
 url=${PROJECT_URL[$number]}

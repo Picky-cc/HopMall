@@ -135,8 +135,8 @@ echo '请输入分支名：'
 read branch_name
 
 if [[ -z $branch_name ]];then
-	echo '没有输入特定的分支名，将使用默认的分支名[yunxin_internal]'
-	branch_name='yunxin_internal'
+	echo '没有输入特定的分支名，将使用默认的分支名[demasiah]'
+	branch_name='demasiah'
 fi
 
 BASE_PATH=$(cd `dirname $0`;cd ..;pwd)
