@@ -27,7 +27,7 @@ function packageProject(){
 
 	if [[ $? -ne 0 ]]; then
 		echo -e '\033[31m打包项目['$projectName']失败，请找出原因重试！\033[0m'
-		exit
+		exit 110
 	else
 		echo -e '\033[33m成功打包项目['$projectName']\033[0m'
 	fi
@@ -115,7 +115,7 @@ else
 			echo $i'./package.sh '${projectName}' 1.0.0-SNAPSHOT '$dist_category_line_info' ===> 将打包'${dist_category_alias_line_info}'资源的'$projectName'项目包,版本为1.0.0-SNAPSHOT'
 		}
 
-		exit 
+		exit 110
 	else
 
 		projectName=$1
