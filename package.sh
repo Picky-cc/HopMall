@@ -1,6 +1,6 @@
 #! /bin/bash
 
-project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler jpmorgan morganStanly all)
+project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler jpmorgan morganStanly mocky all)
 
 function packageProject(){
 
@@ -19,6 +19,10 @@ function packageProject(){
 		cd $BASE_PATH/$projectName;
 
 		mvn clean install -Dzufangbao.version=$version
+	elif [[ $projectName == "mocky" ]]; then
+		cd $BASE_PATH/$projectName;
+
+                mvn clean install -Dzufangbao.version=$version
 
 	else
 		cd $BASE_PATH/zufangbao-springboot-center
