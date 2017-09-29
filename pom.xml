@@ -30,6 +30,7 @@
         <module>../greenLight</module>
         <!-- <module>../test-core</module> -->
         <module>../bridgewater-deduct</module>
+        <module>../bridgewater-remittance</module>
         <module>../swift</module>
         <module>../Xcode</module>
         <module>../morganStanley</module>
