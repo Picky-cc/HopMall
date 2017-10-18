@@ -12,7 +12,7 @@ function packageProject(){
 
 	# echo 'BASE_PATH:'$BASE_PATH
 
-	if [[ $projectName == "SwissRe" ]] || [[ $projectName == "MunichRe" ]] || [[ $projectName == "bridgewater-remittance" ]] || [[ $projectName == "Barclays-crawler" ]] || [[ $projectName == "jpmorgan" ]]; then
+	if [[ $projectName == "SwissRe" ]] || [[ $projectName == "MunichRe" ]] || [[ $projectName == "Barclays-crawler" ]] || [[ $projectName == "jpmorgan" ]]; then
 
 		mvn clean install -DskipCompress=true -Dzufangbao.version=$version
 
