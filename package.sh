@@ -54,11 +54,12 @@ function printOneLineInfo(){
 }
 
 PROJECT_NUM=${#project[*]}
-resource_category=(yunxin shrbank avictc)
+resource_category=(yunxin shrbank avictc weifang)
 declare -A resource_category_alias
 resource_category_alias[yunxin]="信托(类似云信)"
 resource_category_alias[shrbank]="信贷(类似华瑞)"
 resource_category_alias[avictc]="信托(类似中航)"
+resource_category_alias[weifang]="信贷(类似潍坊)"
 
 if [[ $# -eq 0 ]]; then
 
