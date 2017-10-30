@@ -37,6 +37,8 @@
         <module>../matryoshka</module>
         <module>../giotto</module>
         <module>../Barclays</module>
+        <module>../citigroup</module>
+        
     </modules>
 
     <properties>
