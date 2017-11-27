@@ -53,7 +53,6 @@
         <zufangbao.version>1.0.0-SNAPSHOT</zufangbao.version>
 
         <!-- jar version properties -->
-        <spring.version>4.2.7.RELEASE</spring.version>
         <spring-security.version>3.2.5.RELEASE</spring-security.version>
         <junit.version>4.12</junit.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
