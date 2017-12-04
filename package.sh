@@ -1,6 +1,6 @@
 #! /bin/bash
 
-project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler jpmorgan morganStanly mocky all)
+project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler jpmorgan morganStanley mocky all)
 
 function packageProject(){
 
