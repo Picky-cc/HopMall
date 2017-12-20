@@ -24,7 +24,7 @@
         <module>../Renaissance</module>
         <module>../coffer</module>
         <module>../wellsfargo</module>
-        <module>../earth</module>
+        <!-- <module>../earth</module> -->
         <module>../berkshire</module>
         <module>../PriceWaterHouse</module>
         <module>../greenLight</module>
@@ -36,7 +36,7 @@
         <module>../morganStanley</module>
         <module>../matryoshka</module>
         <module>../giotto</module>
-        <module>../Barclays</module>
+       <!--  <module>../Barclays</module> -->
         <module>../citigroup</module>
 
     </modules>
@@ -127,11 +127,11 @@
                 <artifactId>wellsfargo</artifactId>
                 <version>${zufangbao.version}</version>
             </dependency>
-            <dependency>
+         <!--    <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>earth</artifactId>
                 <version>${zufangbao.version}</version>
-            </dependency>
+            </dependency> -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>berkshire</artifactId>
@@ -142,11 +142,11 @@
                 <artifactId>PriceWaterHouse</artifactId>
                 <version>${zufangbao.version}</version>
             </dependency>
-            <dependency>
+          <!--   <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>test-core</artifactId>
-                <version>${zufangbao.version}</version>
-            </dependency>
+                <version>${zufangbao.version}</version>c
+            </dependency> -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>bridgewater-deduct</artifactId>
