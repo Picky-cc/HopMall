@@ -145,7 +145,7 @@
            <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>test-core</artifactId>
-                <version>${zufangbao.version}</version>c
+                <version>${zufangbao.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
