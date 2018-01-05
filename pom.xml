@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.8.RELEASE</version>
+        <version>1.4.5.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -24,7 +24,7 @@
         <module>../Renaissance</module>
         <module>../coffer</module>
         <module>../wellsfargo</module>
-        <module>../earth</module>
+        <module>../earth</module> 
         <module>../berkshire</module>
         <module>../PriceWaterHouse</module>
         <module>../greenLight</module>
@@ -36,9 +36,9 @@
         <module>../morganStanley</module>
         <module>../matryoshka</module>
         <module>../giotto</module>
-        <module>../Barclays</module>
+  		 <module>../Barclays</module>
         <module>../citigroup</module>
-        
+
     </modules>
 
     <properties>
@@ -53,7 +53,6 @@
         <zufangbao.version>1.0.0-SNAPSHOT</zufangbao.version>
 
         <!-- jar version properties -->
-        <spring.version>4.2.7.RELEASE</spring.version>
         <spring-security.version>3.2.5.RELEASE</spring-security.version>
         <junit.version>4.12</junit.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
@@ -128,7 +127,7 @@
                 <artifactId>wellsfargo</artifactId>
                 <version>${zufangbao.version}</version>
             </dependency>
-            <dependency>
+             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>earth</artifactId>
                 <version>${zufangbao.version}</version>
@@ -143,11 +142,11 @@
                 <artifactId>PriceWaterHouse</artifactId>
                 <version>${zufangbao.version}</version>
             </dependency>
-            <dependency>
+          <!--  <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>test-core</artifactId>
-                <version>${zufangbao.version}</version>
-            </dependency>
+                <version>${zufangbao.version}</version>c
+            </dependency> -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>bridgewater-deduct</artifactId>

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler jpmorgan morganStanly mocky all)
+project=(earth berkshire PriceWaterHouse bridgewater-deduct SwissRe Barclays MunichRe bridgewater-remittance  Barclays-crawler jpmorgan morganStanley mocky citigroup all)
 
 function packageProject(){
 
@@ -24,6 +24,10 @@ function packageProject(){
 
                 mvn clean install -Dzufangbao.version=$version
 
+	elif [[ $projectName == "morganStanley" ]] || [[ $projectName == "citigroup" ]]; then
+                echo "$projectName"
+               cd $BASE_PATH/zufangbao-springboot-center;
+                mvn clean install -pl ../$projectName -am
 	else
 		cd $BASE_PATH/zufangbao-springboot-center
 		mvn -Dzufangbao.version=$version -DskipCompress=false clean install -pl ../$projectName -am -DdistTarget=$dist_category
@@ -54,12 +58,13 @@ function printOneLineInfo(){
 }
 
 PROJECT_NUM=${#project[*]}
-resource_category=(yunxin shrbank avictc weifang)
+resource_category=(yunxin shrbank avictc weifang bohai)
 declare -A resource_category_alias
 resource_category_alias[yunxin]="信托(类似云信)"
 resource_category_alias[shrbank]="信贷(类似华瑞)"
 resource_category_alias[avictc]="信托(类似中航)"
 resource_category_alias[weifang]="信贷(类似潍坊)"
+resource_category_alias[bohai]="信托(类似渤海)"
 
 if [[ $# -eq 0 ]]; then
 
