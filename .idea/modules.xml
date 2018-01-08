@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HopMall.iml" filepath="$PROJECT_DIR$/HopMall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HopMall-api/HopMall-api.iml" filepath="$PROJECT_DIR$/HopMall-api/HopMall-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HopMall-common/HopMall-common.iml" filepath="$PROJECT_DIR$/HopMall-common/HopMall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HopMall-farms/HopMall-farms.iml" filepath="$PROJECT_DIR$/HopMall-farms/HopMall-farms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HopMall-web/HopMall-web.iml" filepath="$PROJECT_DIR$/HopMall-web/HopMall-web.iml" />
+    </modules>
+  </component>
+</project>
