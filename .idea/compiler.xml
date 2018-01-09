@@ -6,11 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HopMall" />
+        <module name="HopMall-api" />
+        <module name="HopMall-application" />
+        <module name="HopMall-common" />
+        <module name="HopMall-controller" />
+        <module name="HopMall-dao" />
+        <module name="HopMall-farms" />
+        <module name="HopMall-model" />
+        <module name="HopMall-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="HopMall" target="1.5" />
+      <module name="HopMall-api" target="1.5" />
+      <module name="HopMall-common" target="1.5" />
+      <module name="HopMall-controller" target="1.8" />
+      <module name="HopMall-dao" target="1.5" />
+      <module name="HopMall-farms" target="1.5" />
+      <module name="HopMall-model" target="1.5" />
+      <module name="HopMall-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

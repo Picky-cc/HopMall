@@ -11,4 +11,26 @@
 
     <artifactId>HopMall-farms</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.hopmall</groupId>
+            <artifactId>HopMall-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hopmall</groupId>
+            <artifactId>HopMall-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hopmall</groupId>
+            <artifactId>HopMall-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hopmall</groupId>
+            <artifactId>HopMall-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
