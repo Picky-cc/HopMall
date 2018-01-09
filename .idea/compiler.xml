@@ -17,14 +17,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="HopMall" target="1.5" />
-      <module name="HopMall-api" target="1.5" />
-      <module name="HopMall-common" target="1.5" />
+      <module name="HopMall" target="1.8" />
+      <module name="HopMall-api" target="1.8" />
+      <module name="HopMall-common" target="1.8" />
       <module name="HopMall-controller" target="1.8" />
-      <module name="HopMall-dao" target="1.5" />
-      <module name="HopMall-farms" target="1.5" />
-      <module name="HopMall-model" target="1.5" />
-      <module name="HopMall-web" target="1.5" />
+      <module name="HopMall-dao" target="1.8" />
+      <module name="HopMall-farms" target="1.8" />
+      <module name="HopMall-model" target="1.8" />
+      <module name="HopMall-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

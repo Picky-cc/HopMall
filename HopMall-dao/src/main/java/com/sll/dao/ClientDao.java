@@ -4,7 +4,7 @@ import com.sll.model.Client;
 
 import java.util.List;
 
-public interface clientDao {
+public interface ClientDao {
 
     public List<Client> getClient();
 }

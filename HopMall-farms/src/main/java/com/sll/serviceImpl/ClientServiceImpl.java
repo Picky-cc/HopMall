@@ -1,5 +1,6 @@
 package com.sll.serviceImpl;
 
+import com.sll.dao.ClientDao;
 import com.sll.model.Client;
 import com.sll.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +11,11 @@ import java.util.List;
 @Service
 public class ClientServiceImpl implements ClientService {
 
-    private ClientService clientService;
+    @Autowired
+    private ClientDao clientDao;
 
     public List<Client> getClient() {
-        List<Client> list = clientService.getClient();
+        List<Client> list = clientDao.getClient();
         if (list == null || list.size() == 0){
             return null;
         }else {

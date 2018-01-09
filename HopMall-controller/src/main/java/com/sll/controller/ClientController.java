@@ -26,6 +26,7 @@ public class ClientController {
     public String getClientInfo(HttpServletRequest request, ModelMap model) throws Exception{
         List<Client> clients = clientService.getClient();
         model.addAttribute("clients",clients);
+        System.out.println(clients);
         return "client";
     }
 }
