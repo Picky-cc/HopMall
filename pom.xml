@@ -26,6 +26,7 @@
         <spring.version>4.3.0.RELEASE</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mysql-driver.version>5.1.30</mysql-driver.version>
+        <slf4j.version>1.7.18</slf4j.version>
     </properties>
 
     <dependencies>
@@ -153,6 +154,17 @@
             <artifactId>jsp-api</artifactId>
             <version>2.1</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
 

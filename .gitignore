@@ -2,3 +2,9 @@
 *.class
 .idea/libraries/
 HopMall-dao/target/
+*.iml
+HopMall-web/target/HopMall-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF
+.idea/workspace.xml
+*.mp3
+HopMall-web/target/
+out/

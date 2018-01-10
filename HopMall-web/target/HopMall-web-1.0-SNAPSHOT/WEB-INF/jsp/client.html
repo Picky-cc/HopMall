@@ -6,16 +6,20 @@
     <script src="../js/angular.min.js"></script>
     <script src="../js/client.js"></script>
 </head>
-<body ng-controller="clientController">
-    <div>
-        <p>我的名字 : <input type="text" ng-model="name"></p>
-        <h1>Hello {{5+name}}</h1>
+<body>
+    <div ng-app="myapp" ng-controller="clientController">
+        <p>我的名字 : <input type="text" ng-model="username"></p>
+        <h1>Hello {{5+username}}</h1>
         <button ng-click="doSearch()">提交</button>
         <table>
-            <tr ng-repeat="x in client">
-                <td>{{x.name}}</td>
+            <tr ng-repeat="x in client track by $index">
+                <td align="center" name="username">{{ x.name }}</td>
+                <td align="center">{{ x.age }}</td>
+                <!--<td ng-show="" align="center">{{ userid }}</td>-->
+                <!--<td align="center"><button ng-click="doShow(x.id)">显示/隐藏</button></td>-->
             </tr>
         </table>
     </div>
+
 </body>
 </html>

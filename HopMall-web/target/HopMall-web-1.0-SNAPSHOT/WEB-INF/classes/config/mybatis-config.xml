@@ -2,8 +2,6 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.sll.model" />
+        <typeAlias type="com.sll.model.Client" alias="client"/>
     </typeAliases>
-
-
 </configuration>
