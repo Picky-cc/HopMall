@@ -33,6 +33,7 @@ public class ClientController {
         model.addAttribute("clients",clients);
         for (Client client : clients){
             logger.info("ClientInfo : name - {} , age - {} ",client.getName(),client.getAge());
+            logger.error("-------------------------------------------------------------------");
         }
         return clients;
     }
