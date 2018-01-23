@@ -67,6 +67,7 @@ function executeCommand(){
 			# git push origin :refs/tags/yunxin_internal
 
 		elif [[ $command_name == "checkout" ]]; then
+			git pull origin
 			git checkout $branchName
 		elif [[ $command_name == "checkout_new" ]]; then
 			git checkout -b $branchName;
