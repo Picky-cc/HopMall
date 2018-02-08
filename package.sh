@@ -19,7 +19,7 @@ function packageProject(){
 		cd $BASE_PATH/$projectName;
 
 		mvn clean install -Dzufangbao.version=$version
-	elif [[ $projectName == "mocky" ]]; then
+	elif [[ $projectName == "mocky" ]] || [[ $projectName == "Chronus"  ]]; then
 		cd $BASE_PATH/$projectName;
 
                 mvn clean install -Dzufangbao.version=$version
