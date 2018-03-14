@@ -1,18 +1,8 @@
 <component name="ArtifactManager">
   <artifact type="war" name="HopMall-web:war">
     <output-path>$PROJECT_DIR$/HopMall-web/target</output-path>
-    <root id="archive" name="HopMall-web-1.0-SNAPSHOT.war">
+    <root id="archive" name="HopMall-web.war">
       <element id="artifact" artifact-name="HopMall-web:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes">
-          <element id="module-output" name="HopMall-api" />
-          <element id="module-output" name="HopMall-common" />
-          <element id="module-output" name="HopMall-dao" />
-          <element id="module-output" name="HopMall-farms" />
-          <element id="module-output" name="HopMall-model" />
-          <element id="module-output" name="HopMall-controller" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>
