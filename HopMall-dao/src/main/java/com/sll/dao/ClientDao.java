@@ -7,4 +7,6 @@ import java.util.List;
 public interface ClientDao {
 
     public List<Client> getClient();
+
+    public List<Client> getClientByName(String name);
 }

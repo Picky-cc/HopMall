@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clientInfo测试</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/clientInfo.js"></script>
+</head>
+<body>
+    <div ng-app="clientInfo" ng-controller="clientInfoController" align="center">
+        <button ng-click="doSearch()">测试</button>
+        <table>
+            <tr ng-repeat="x in client track by $index">
+                <td align="center" name="username">{{ x.name }}</td>
+                <td align="center">{{ x.age }}</td>
+            </tr>
+        </table>
+        请输入查询人姓名：<input type="text" ng-model="search.username">
+        <br>
+        <button ng-click="searchByName()">查询</button>
+        <table>
+            <tr ng-repeat="x in people track by $index">
+                <td align="center" name="username">{{ x.name }}</td>
+                <td align="center">{{ x.age }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

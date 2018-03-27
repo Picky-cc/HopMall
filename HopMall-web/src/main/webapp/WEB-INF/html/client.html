@@ -8,31 +8,17 @@
 </head>
 <body>
 
-    <div ng-app="myapp" ng-controller="clientController">
-        <p>我的名字 : <input type="text" ng-model="username"></p>
-        <h1>Hello {{5+username}}</h1>
-        <button ng-click="doSearch()">提交</button>
-        <h2>放上去</h2>
-        <input ng-blur="count = count + 1" ng-init="count=0"/>
-        <h2>{{ count }}</h2>
-        <input ng-copy="number = number + 1" ng-init="number =0" value="你来copy我呀!"/>
-        <h2>该文本被copy了{{ number }}次</h2>
-        点击这里禁用所有表单输入域:<input type="checkbox" ng-model="all"><br>
+    <h1 align="center">二维码生成器</h1>
+    <div ng-app="myapp" ng-controller="clientController" align="center">
         <br>
-        <input type="text" ng-disabled="all">
-        <input type="radio" ng-disabled="all">
-        <select ng-disabled="all" ng-repeat="x in client track by $index">
-            <option value="{{x}}">Female</option>
-            <option>Male</option>
-        </select>
-        <table>
-            <tr ng-repeat="x in client track by $index">
-                <td align="center" name="username">{{ x.name }}</td>
-                <td align="center">{{ x.age }}</td>
-                <!--<td ng-show="" align="center">{{ userid }}</td>-->
-                <!--<td align="center"><button ng-click="doShow(x.id)">显示/隐藏</button></td>-->
-            </tr>
-        </table>
+        请输入二维码内容：<input type="text" ng-model="qr.content" style="width: 40%"/>
+        <button ng-click="doImage()">生成</button>
+        <br>
+        <img src="data:image/png;base64,{{ qrimage }}">
+        <br>
+        <br>
+        <br>
+        <a href="clientInfo.html">客户数据测试</a>
     </div>
 
 </body>

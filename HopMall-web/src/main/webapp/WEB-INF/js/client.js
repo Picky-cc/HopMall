@@ -1,18 +1,20 @@
 var app = angular.module('myapp',[]);
 app.controller('clientController',function ($scope,$http) {
-        $scope.doSearch = function () {
+
+        $scope.qr = {};
+
+        $scope.doImage = function () {
+            var paramData = $scope.qr;
             $http({
-                method: 'POST',
-                url: '/ssl/client',
+                method:'POST',
+                url: '/ssl/QRImage',
+                params: paramData,
                 headers: {'Content-Type': 'text/html;charset=UTF-8'}
-            }).success(function (response) {
-                $scope.client = response;
+            }).success(function(response){
+                $scope.qrimage = response.image;
             })
         }
-        // $scope.doShow = function (id) {
-        //     console.log(id);
-        //         $scope.userid = id;
-        // }
     }
 );
+
 

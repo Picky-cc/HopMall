@@ -1,7 +1,7 @@
 import java.sql.*;
 public class DaoTest {
         private static final String COM_MYSQL_JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        private static final String JDBC_MYSQL_LOCALHOST_JASMINE = "jdbc:mysql://192.168.1.171:3306/jasmine?useUnicode=true&characterEncoding=utf-8 ";
+        private static final String JDBC_MYSQL_LOCALHOST_JASMINE = "jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8 ";
 
         private static final byte[] USER = {114, 111, 111, 116};
         private static final byte[] PASS = {114, 111, 111, 116};
@@ -13,7 +13,7 @@ public class DaoTest {
             try{
                 Class.forName(COM_MYSQL_JDBC_DRIVER);
                 System.out.println("正在连接数据库...");
-                conn = DriverManager.getConnection(JDBC_MYSQL_LOCALHOST_JASMINE, new String(USER), new String(PASS));
+                conn = DriverManager.getConnection(JDBC_MYSQL_LOCALHOST_JASMINE, "root", "329916");
                 String sql = "select * from user";
                 stmt = conn.prepareStatement(sql);
                 rs = stmt.executeQuery(sql);

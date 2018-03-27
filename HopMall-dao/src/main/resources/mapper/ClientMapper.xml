@@ -2,6 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sll.dao.ClientDao">
     <select id="getClient" resultType="client">
-        SELECT id,name,age FROM user;
+        SELECT oid,name,age FROM client;
+    </select>
+    <select id="getClientByName" resultType="client" parameterType="String">
+        SELECT oid,name,age FROM client WHERE name=#{name};
     </select>
 </mapper>
